@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en" ng-app="personList">
+<head>
+	<title>FoCo MX Music Schedule</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="googlebot" content="noindex, nofollow">
+      <meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/common.css">
+
+ <script src="js/admob2.js"></script>
+ <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+     <script src="js/jquery-3.2.1.js"></script>
+
+
+
+  <script src="js/bootstrap.js"></script>
+   	<script src="js/app.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+
+
+   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+   integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+   crossorigin=""></script> 
+
+
+
+
+
+	
+
+
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<!--Trigger interstitial add after 90 seconds -->
+<script type="text/javascript">
+setTimeout("CallButton()",90000)
+function CallButton()
+{
+   document.getElementById("showAd").click();    
+}
+</script>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+<div class="topnav" id="myTopnav">
+  <a href="# onclick="nav_function()" style="pointer-events: none;"><img src="img/pick.png" alt="FoCoMX logo" id="nav_image">    FoCoMX 2019</a>
+  <a href="#schedule" onclick="nav_function();schedule()" class="topnav_link">Schedule</a>
+  <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link">Favorites</a>
+  <a href="#foco" onclick="nav_function();foco()" class="topnav_link">About</a>
+  <a href="#map" onclick="nav_function();loadmap();map_int()" class="topnav_link">Map</a>
+  <a href="#sponsors" onclick="nav_function();sponsors()" class="topnav_link">Sponsors</a>
+  <a href="#social" onclick="nav_function();social()" class="topnav_link">Social</a>
+  <a href="javascript:void(0);" class="icon" onclick="nav_function()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+<div class="navLinks" id="foco">
+<section  class="wide">
+
+<div style="font-size: 0.9em; text-align: center; padding-left:5px; padding-right: 8px;">
+<h3>FoCoMX 2019</h3>
+<p>The Fort Collins Musicians Association (FoCoMA) is proud to present the 11th Annual Fort Collins Music eXperiment (FoCoMX) on April 26 & 27, 2019.</p>
+<p>We are so lucky to have such a vibrant scene that is supported by music lovers and our community at large. Thank you to everyone for making such an event possible! FoCoMX, presented by the nonprofit Fort Collins Musicians Association (FoCoMA) is 2-day festival with well over 200 artists. Afternoon and evening performances offer a wealth of family-friendly programming. Later-evening performances feature rock, singer-songwriter, bluegrass, funk, reggae and more.</p>
+<p>FoCoMX started in 2009 as a grassroots experiment in promoting local music. The festival has grown over the years and we now see attendance of approximately 5500  and has garnering national attention and earning FoCoMX the unofficial title of “The Biggest Little Festivalin America.”  </p>
+
+<a href="https://www.focoma.org" target="_blank" class="external_btn">Buy Tickets!</a> 
+<a href="https://www.focoma.org" target="_blank" class="external_btn">Volunteer</a> 
+</br></br>
+<h4>Frequently Asked Questions</h4>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading1">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                    FAQ 1
+                </a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+            <div class="panel-body">
+                <p>asdfasdf</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading2">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    FAQ 2
+                </a>
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+            <div class="panel-body">
+                <p>sdfasdf</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading3">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    FAQ 3
+                </a>
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+            <div class="panel-body">
+                <p>sdfasdf</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading4">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    FAQ 4
+                </a>
+            </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+            <div class="panel-body">
+                <p>asdfasdf</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading5">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    FAQ 5
+                </a>
+            </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+            <div class="panel-body">
+                <p>sfsafsdf</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>About the Fort Collins Musicians Association</h3>
+<p>The Fort Collins Musicians Association’s nonprofit mission is to provide education, support and networking opportunities to the Fort Collins (and surrounding) music community.</p>
+<p>FoCoMA.org provides education, support, and networking opportunities for the Fort Collins music community.</p>
+<a href="https://www.focoma.org" target="_blank" class="external_btn">Learn About the FoCoMA</a> 
+</div>
+
+
+
+   
+</section>
+</div>
+
+<div class="navLinks" id="social">
+<section  class="wide">
+<div class="twitter_respond">
+<h2>Add to the Conversation!</h2>
+<a href="https://twitter.com/intent/tweet?button_hashtag=focomx19&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-dnt="true" data-show-count="false">Tweet #focomx19</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>    
+<div class="twitter_div">
+<a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/FoCoMX?ref_src=twsrc%5Etfw">Tweets by FoCoMX</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+
+</section>
+</div>
+
+
+<div class="navLinks" id="schedule">
+<section id="schedule" class="wide">
+
+<h1 class="headers">Festival Schedule</h1>
+ 
+<input id="myInput" type="text" value="" placeholder="Type to Filter"/><button id="clearbutton" onclick="document.getElementById('myInput').value = ''">&#9940;</button>
+
+
+<TABLE ID="SECOND" class="SECOND cards-table"> 
+  <thead>
+                        <tr>
+                          <th style="display:none;">ID</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                            <th>Style</th>
+                            <th>Band</th>
+                            <th>Learn More</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+<tbody>
+        <tr class="content">
+            <td class="sortnr" style="display:none;">1</td>
+            <td class="tpl">Fri</td>
+            <td class="tpr">3:30pm-4:15pm</td>
+            <td class="tpr">Rock-Pop</td>
+            <td class="middlerow"><button onclick="openModal();currentSlide(1)">Michael Kirkpatrick</button></td>
+            <td class="bottomrow"><button onclick="openModal();currentSlide(3)">Equinox</button></td>
+            <td class="heart">
+                <a href="#favorites" onclick="my_favs()">&#9829;</a>
+            </td>
+        </tr>
+
+        <tr class="content">
+            <td class="sortnr" style="display:none;">2</td>
+            <td class="tpl">Fri</td>
+            <td class="tpr">3:30pm-4:30pm</td>
+            <td class="tpr">Cover-Tribute</td>
+            <td class="middlerow"><button onclick="openModal();currentSlide(2)">Loud Mary</button></td>
+            <td class="bottomrow"><button onclick="openModal();currentSlide(4)">New Belgium</button></td>
+            <td class="heart">
+                <a href="#favorites" onclick="my_favs()">&#9829;</a>
+            </td>
+        </tr>
+        <tr class="content">
+            <td class="sortnr" style="display:none;">3</td>
+            <td class="tpl">Fri</td>
+            <td class="tpr">3:45pm-4:30pm</td>
+            <td class="tpr">Bluegrass-Americana</td>
+            <td class="middlerow"><button onclick="">The River Arkansas (fake link)</button></td>
+            <td class="bottomrow"><button onclick="">Odell Brewing Co (fake link)</button></td>
+            <td class="heart">
+                <a href="#favorites" onclick="my_favs()">&#9829;</a>
+            </td>
+        </tr>
+
+        <tr class="content">
+            <td class="sortnr" style="display:none;">4</td>
+            <td class="tpl">Fri</td>
+            <td class="tpr">4:00pm-7:00pm</td>
+            <td class="tpr">Electronic-DJ</td>
+            <td class="middlerow"><button onclick="">Forty-Five Plus One with DJ Alf (fake link)</button></td>
+            <td class="bottomrow"><button onclick="">New Belgium Brewing (fake link)</button></td>
+            <td class="heart">
+                <a href="#favorites" onclick="my_favs()">&#9829;</a>
+            </td>
+        </tr>
+
+        <tr class="content">
+            <td class="sortnr" style="display:none;">5</td>
+            <td class="tpl">Fri</td>
+            <td class="tpr">4:30pm-5:15pm</td>
+            <td class="tpr">Singer-Songwriter</td>
+            <td class="middlerow"><button onclick="">Shaley Scott (fake link)</button></td>
+            <td class="bottomrow"><button onclick="">Equinox Brewing (fake link)</button></td>
+            <td class="heart">
+                <a href="#favorites" onclick="my_favs()">&#9829;</a>
+            </td>
+        </tr>
+
+        <tr class="content">
+            <td class="sortnr" style="display:none;">6</td>
+            <td class="tpl">Sat</td>
+            <td class="tpr">5:00pm-5:30pm</td>
+            <td class="tpr">Singer-Songwriter</td>
+            <td class="middlerow"><button onclick="">Taylor Shae (fake link)</button></td>
+            <td class="bottomrow"><button onclick="">Everyday Joe's (fake link)</button></td>
+            <td class="heart">
+                <a href="#favorites" onclick="my_favs()">&#9829;</a>
+            </td>
+        </tr>
+
+        <tr class="content">
+            <td class="sortnr" style="display:none;">7</td>
+            <td class="tpl">Sat</td>
+            <td class="tpr">5:00pm-5:45pm</td>
+            <td class="tpr">Rock-Pop</td>
+            <td class="middlerow"><button onclick="">Nightlove (fake link)</button></td>
+            <td class="bottomrow"><button onclick="">New Belgium (fake link)</button></td>
+            <td class="heart">
+                <a href="#favorites" onclick="my_favs()">&#9829;</a>
+            </td>
+        </tr>
+
+        <tr class="content">
+            <td class="sortnr" style="display:none;">8</td>
+            <td class="tpl">Sat</td>
+            <td class="tpr">5:00pm-6:00pm</td>
+            <td class="tpr">Bluegrass-Americana</td>
+            <td class="middlerow"><button onclick="">The Matt Skinner Band (fake link)</button></td>
+            <td class="bottomrow"><button onclick="">Odell Brewing Co (fake link)</button></td>
+            <td class="heart">
+                <a href="#favorites" onclick="my_favs()">&#9829;</a>
+            </td>
+        </tr>
+
+        
+
+</tbody>
+</TABLE>
+</section>
+</div>
+
+<div class="navLinks" id="fav">
+<section id="favorites" class="wide">
+  <h1 class="headers">My Shows</h1>
+
+<input id="myInput2" type="text" value="" placeholder="Type to Filter"/><button id="clearbutton2" onclick="document.getElementById('myInput2').value = ''">&#9940;</button> 
+  <TABLE ID="FIRST" class="FIRST cards-table">
+  <thead>
+                        <tr>
+                          <th style="display:none;">ID</th>
+                            <th>Day</th>
+                            <th>Venue</th>
+                            <th>Band</th>
+                            <th>Learn More</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+</TABLE>
+    
+<hr />
+
+</section>
+</div>
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+        <h2 class="artist">Michael Kirkpatrick</h2>
+        <h3 class="artist">Rock-Pop</h3>
+        <p class="artist">This is Michael's 10th FoCoMX. Michael Kirkpatrick is best known as the 2014 Telluride Troubadour, and ringleader of Holler!ween--a Northern Colorado music festival in its 16th year. Michael's sonic affair with music has brought his rich baritone into The Santa Fe Opera, Folk clubs, Rock'nRoll venues and Bluegrass Festivals. Performing over 250 dates a year on guitars, mandolins and voice, Michael brings it all to the theater: sweat, sensuality, tears, and sometimes blood.
+        <div class="artist_img_div"><img src="img/artist/a1.png" alt="web logo" class="artist_img"></div>
+        <img>
+        <div>
+            <iframe src="https://open.spotify.com/embed/track/612KXJxKnw45ZVyUOV3Xht" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+        <h3 class="artist">Learn More About the Artist</h3>
+        <div class="artist">
+            <a href="https://www.facebook.com/michaelkirkpatrickmusic" target="_blank" title="Michael Kirkpatrick on Facebook"><img src="img/facebook.png" alt="facebook logo" class="link_img"></a>
+        </div>
+        <div class="artist">
+            <a href="http://www.michaelkirkpatrickmusic.com/" target="_blank" title="Michael Kirkpatrick"><img src="img/web.png" alt="web logo" class="link_img"></a>
+        </div>
+
+
+       
+       
+    </div>
+    <div class="mySlides">
+        <h2 class="artist">Loud Mary</h2>
+        <h3 class="artist">Cover-Tribute</h3>
+        <p class="artist">Loud Mary started as a one time performance that turned out to be just what people wanted.</p>
+        <div class="artist_img_div"><img src="img/artist/a2.png" alt="web logo" class="artist_img"></div>
+        <h3 class="artist">Learn More About the Artist</h3>
+        <div class="artist">
+            <a href="https://www.facebook.com/ccrtributeband/" target="_blank" title="Loud Mary on Facebook"><img src="img/facebook.png" alt="web logo" class="link_img"></a>
+        </div>
+        <div class="artist">
+            <a href="http://www.loudmarys.com" target="_blank" title="Loud Mary"><img src="img/web.png" alt="web logo" class="link_img"></a>
+        </div>
+       
+    </div>
+
+     <div class="mySlides">
+        <h2 class="artist">Equinox Brewing</h2>
+        <h3 class="artist">133 Remington St, Fort Collins, CO 80524</h3>
+        <p class="artist"><img alt="FocoBanner" src="img/v384.PNG" style="width: 100%"></p>
+        <div class="artist">
+            <a href="https://goo.gl/maps/EqRsjvHTkZ82" target="_blank" title="Directions">Live Map</a>
+        </div>
+  
+    </div>
+
+    <div class="mySlides">
+        <h2 class="artist">New Belgium Brewing</h2>
+        <h3 class="artist">500 Linden St, Fort Collins, CO 80524</h3>
+        <p class="artist"><img alt="FocoBanner" src="img/v395.PNG" style="width: 100%"></p>
+        <div class="artist">
+            <a href="https://goo.gl/maps/q9NU1uheA862" target="_blank" title="Directions">Live Map</a>
+        </div>
+
+    </div>
+  
+<!-- END OF VENUE CARDS -->
+     
+</div>
+
+</div>
+
+
+<div class="navLinks" id="mapdiv">
+<section id="maps" class="wide">
+  <h1 class="headers">Locations</h1>
+  <div id="mapid" ></div>
+
+</section>
+</div>
+
+<div class="navLinks" id="sponsors">
+<section id="sponsor" class="wide">
+  <h1 class="headers">Sponsors</h1>
+ 
+ <p>We'd like to thank the many sponsors to help make this event possible. FoCoMX would not be possible without you.</p>
+ <p>Learn more about the local businesses and organizations that sponsor FoCoMX and FoCoMA.org by clicking the images below.</p>
+
+ <div class="container-fluid">
+    <div class="row sponsor_row" >
+        <div class="sponsor_col"><a href="http://www.google.com" target="_blank"><img src="img/sponsors/s1.png" alt="FoCoMX logo" class="sponsor_img"></a>
+        </div>
+        <div class="sponsor_col"><a href="http://www.google.com" target="_blank"><img src="img/sponsors/s1.png" alt="FoCoMX logo" class="sponsor_img"></a>
+        </div>
+    </div>
+    <div class="row sponsor_row" >
+        <div class="sponsor_col"><a href="http://www.google.com" target="_blank"><img src="img/sponsors/s1.png" alt="FoCoMX logo" class="sponsor_img"></a>
+        </div>
+        <div class="sponsor_col"><a href="http://www.google.com" target="_blank"><img src="img/sponsors/s1.png" alt="FoCoMX logo" class="sponsor_img"></a>
+        </div>
+    </div>
+    <div class="row sponsor_row" >
+        <div class="sponsor_col"><a href="http://www.google.com" target="_blank"><img src="img/sponsors/s1.png" alt="FoCoMX logo" class="sponsor_img"></a>
+        </div>
+        <div class="sponsor_col"><a href="http://www.google.com" target="_blank"><img src="img/sponsors/s1.png" alt="FoCoMX logo" class="sponsor_img"></a>
+        </div>
+    </div>
+</div>
+
+</section>
+</div>
+ 
+
+<script type="text/javascript">
+    document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    window.open = cordova.InAppBrowser.open;
+}
+
+</script>
+
+
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($) {
+  // Scroll to the desired section on click
+  // Make sure to add the `data-scroll` attribute to your `<a>`          tag.
+  // Example: 
+  // `<a data-scroll href="#my-section">My Section</a>` will scroll to an element with the id of 'my-section'.
+  function scrollToSection(event) {
+
+    event.preventDefault();
+    var $section = $($(this).attr('href')); 
+    $('html, body').animate({
+      scrollTop: $section.offset().top
+    }, 500);
+  }
+  $('[data-scroll]').on('click', scrollToSection);
+}(jQuery));
+
+</script>
+
+ <script type="text/javascript">
+        function filterTable(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#SECOND tbody").rows;
+    
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+        var fourthCol = rows[i].cells[3].textContent.toUpperCase();
+        var fifthCol = rows[i].cells[4].textContent.toUpperCase();
+        var sixthCol = rows[i].cells[5].textContent.toUpperCase();
+          if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1 || fourthCol.indexOf(filter) > -1 || fifthCol.indexOf(filter) > -1 || sixthCol.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
+
+}
+
+
+ function filterTable2(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#FIRST tbody").rows;
+    
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+        var fourthCol = rows[i].cells[3].textContent.toUpperCase();
+        var fifthCol = rows[i].cells[4].textContent.toUpperCase();
+        var sixthCol = rows[i].cells[5].textContent.toUpperCase();
+          if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1 || fourthCol.indexOf(filter) > -1 || fifthCol.indexOf(filter) > -1 || sixthCol.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
+
+}
+
+
+function sortT(){
+
+    var tbl = document.getElementById("FIRST").tBodies[0];
+    var store = [];
+    for(var i=0, len=tbl.rows.length; i<len; i++){
+        var row = tbl.rows[i];
+        var sortnr = parseFloat(row.cells[0].textContent || row.cells[0].innerText);
+        if(!isNaN(sortnr)) store.push([sortnr, row]);
+    }
+    store.sort(function(x,y){
+        return x[0] - y[0];
+    });
+    for(var i=0, len=store.length; i<len; i++){
+        tbl.appendChild(store[i][1]);
+    }
+    store = null;
+
+}
+
+
+
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+document.querySelector('#clearbutton').addEventListener('click', filterTable, false);
+
+document.querySelector('#myInput2').addEventListener('keyup', filterTable2, false);
+document.querySelector('#clearbutton2').addEventListener('click', filterTable2, false);
+
+
+    </script>
+
+
+
+<script src="js/mapresources.js"></script>
+
+<p style="text-align: center;margin: auto; width: 100vw; background: #242424; color: white; font-size: 0.7em">FoCOMX 2019 - Development Donated by OrangeHouse LLC</p>
+<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/admob2.js"></script>
+<script type="text/javascript" src="phonegap.js"></script>
+
+<!--Script to change _blank hrefs to exteral  -->
+<script type="text/javascript">
+    $("a[target='_blank']").click(function(e){
+  e.preventDefault();
+  window.open($(e.currentTarget).attr('href'), '_system', '');
+});
+</script>
+	
+
+
+</body>
+</html>
