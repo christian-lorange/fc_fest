@@ -23,6 +23,7 @@
 
   <script src="js/bootstrap.js"></script>
    	<script src="js/app.js"></script>
+    <script src="js/table.js"></script>
 
 
 
@@ -64,7 +65,7 @@ function CallButton()
 
 
 
-<body>
+<body onload="checkstatus()">
 
 
 
@@ -72,7 +73,7 @@ function CallButton()
 <div class="topnav" id="myTopnav">
   <a href="# onclick="nav_function()" style="pointer-events: none;"><img src="img/pick.png" alt="FoCoMX logo" id="nav_image">    FoCoMX 2019</a>
   <a href="#schedule" onclick="nav_function();schedule()" class="topnav_link">Schedule</a>
-  <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link">Favorites</a>
+  <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link">My Show List</a>
   <a href="#foco" onclick="nav_function();foco()" class="topnav_link">About</a>
   <a href="#map" onclick="nav_function();loadmap();map_int()" class="topnav_link">Map</a>
   <a href="#sponsors" onclick="nav_function();sponsors()" class="topnav_link">Sponsors</a>
@@ -205,17 +206,17 @@ function CallButton()
 <input id="myInput" type="text" value="" placeholder="Type to Filter"/><button id="clearbutton" onclick="document.getElementById('myInput').value = ''">&#9940;</button>
 
 
-<TABLE ID="SECOND" class="SECOND cards-table"> 
+<TABLE ID="SECOND" class="table-autosort table-autofilter SECOND cards-table"> 
   <thead>
                         <tr>
                           <th style="display:none;">ID</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Venue</th>
-                            <th>Style</th>
-                            <th>Band</th>
-                            <th>Learn More</th>
-                            <th></th>
+                            <th class="table-filterable" id="SECOND_select">Day   </th>
+                            <th style="display:none;">Time</th>
+                            <th style="display:none;">Venue</th>
+                            <th style="display:none;">Style</th>
+                            <th style="display:none;">Band</th>
+                            <th style="display:none;">Learn More</th>
+                            <th style="display:none;" ></th>
                         </tr>
                     </thead>
 <tbody>
@@ -326,15 +327,17 @@ function CallButton()
   <h1 class="headers">My Shows</h1>
 
 <input id="myInput2" type="text" value="" placeholder="Type to Filter"/><button id="clearbutton2" onclick="document.getElementById('myInput2').value = ''">&#9940;</button> 
-  <TABLE ID="FIRST" class="FIRST cards-table">
+  <TABLE ID="FIRST" class="table-autosort table-autofilter FIRST cards-table">
   <thead>
                         <tr>
                           <th style="display:none;">ID</th>
-                            <th>Day</th>
-                            <th>Venue</th>
-                            <th>Band</th>
-                            <th>Learn More</th>
-                            <th></th>
+                            <th class="table-filterable" id="FIRST_select">Day   </th>
+                            <th style="display:none;">Time</th>
+                            <th style="display:none;">Venue</th>
+                            <th style="display:none;">Style</th>
+                            <th style="display:none;">Band</th>
+                            <th style="display:none;">Learn More</th>
+                            <th style="display:none;" ></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -507,6 +510,7 @@ jQuery(document).ready(function($) {
 }
 
 
+
  function filterTable2(event) {
     var filter = event.target.value.toUpperCase();
     var rows = document.querySelector("#FIRST tbody").rows;
@@ -526,6 +530,8 @@ jQuery(document).ready(function($) {
     }
 
 }
+
+
 
 
 function sortT(){

@@ -36,6 +36,18 @@ table, td, th, input {
 	line-height: 25px;
 }
 
+th.table-filterable {
+    font-size: 2em;
+    display: inline-table;
+}
+
+th {
+  width:100vw !important;
+  text-align: center;
+  border:none !important;
+
+}
+
 input {
 	padding: 4px 12px;
 }
@@ -157,7 +169,7 @@ img.hover-shadow {
 }
 
 thead {
-    display: none;
+    
 }
 
 tr {

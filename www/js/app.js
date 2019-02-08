@@ -142,16 +142,27 @@ function nav_function() {
 function foco() {
 hide();
 document.getElementById('foco').style.display = 'block';
+document.getElementById('myInput').value = '';
 }
 
 function schedule() {
 hide();
 document.getElementById('schedule').style.display = 'block';
+document.getElementById('myInput').value = '';
 }
 
 function my_favs() {
+location.reload()
+ if (rows >= 2) {
+    my_favs2();
+  }
+  alert("You haven't added anything to your list yet. Click the heart symbol to add a show to your personal list.");   
+}
+
+function my_favs2() {
 hide();
 document.getElementById('fav').style.display = 'block';
+document.getElementById('myInput2').value = '';      
 }
 
 function loadmap() {
@@ -177,3 +188,44 @@ function hide () {
         divsToHide[i].style.display = "none"; // depending on what you're doing
     }
 }
+
+function checkstatus () {
+  var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
+  if (rows >= 2) {
+    my_favs2();
+  }
+ 
+  clear ();
+  
+}
+
+function clear () {
+//Clearing selection from before
+ 
+    var rows = document.querySelector("#SECOND tbody").rows;
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+        var fourthCol = rows[i].cells[3].textContent.toUpperCase();
+        var fifthCol = rows[i].cells[4].textContent.toUpperCase();
+        var sixthCol = rows[i].cells[5].textContent.toUpperCase();
+            rows[i].style.display = "";
+              
+    }
+
+ 
+    var rows = document.querySelector("#FIRST tbody").rows;
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+        var fourthCol = rows[i].cells[3].textContent.toUpperCase();
+        var fifthCol = rows[i].cells[4].textContent.toUpperCase();
+        var sixthCol = rows[i].cells[5].textContent.toUpperCase();
+            rows[i].style.display = "";
+              
+    }
+
+
+  }
