@@ -161,7 +161,7 @@ location.reload()
     'You have not added anything to your list yet. Click the heart symbol to add a show to your personal list.',  // message
     alertDismissed,         // callback
     'Add shows to your list',            // title
-    'Okay'                  // buttonName
+    'Okay'    )              // buttonName
 }
 
 function my_favs2() {
