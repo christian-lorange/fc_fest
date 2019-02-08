@@ -642,6 +642,9 @@ img.link_img {
 .twitter_respond {
   text-align: center;
   padding-top: 80px;
+  padding-bottom: 20px;
+  background-color: #08a0e9;
+  border-radius: 30px;
 }
 
 
