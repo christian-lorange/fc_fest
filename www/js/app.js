@@ -181,9 +181,16 @@ if (ad_increment == null){                                //if that tracking var
 
   localStorage.setItem("ad_increment",ad_increment_temp)  //update that tracking variable in local storage
 
-if (ad_increment.length >=6){                             //if tracking variable is more than 6 digits reset to 1 digital and show interstitial ad
+if (ad_increment.length >=5){                             //if tracking variable is more than 5 digits reset to 1 digital and show interstitial ad
   localStorage.setItem("ad_increment","0")
-  admob.interstitial.show()  
+
+  setTimeout(function (){
+
+  // Something you want delayed.
+    admob.interstitial.show()  
+
+}, 2000); // How long do you want the delay to be (in milliseconds)? 
+
 }
 
 }

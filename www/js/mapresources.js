@@ -79,7 +79,7 @@ selector.onAdd = function(map) {
   //create div container
   var div = L.DomUtil.create('div', 'mySelector');
   //create select element within container (with id, so it can be populated later)
-  div.innerHTML = '<select id="marker_select"><option value="init">Find Venue</option></select>';
+  div.innerHTML = '<select id="marker_select" style="background-color: #135A32; color:white"><option value="init">Find Venue</option></select>';
   return div;
 };
 
