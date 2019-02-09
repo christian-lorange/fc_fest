@@ -167,7 +167,25 @@ location.reload()
 function my_favs2() {
 hide();
 document.getElementById('fav').style.display = 'block';
-document.getElementById('myInput2').value = '';      
+document.getElementById('myInput2').value = '';   
+
+// Showing interstitial ad after 5 times going to "my show page"
+
+var ad_increment = localStorage.getItem("ad_increment");  //create a tracking variable
+
+if (ad_increment == null){                                //if that tracking varialble dosen't exist create one and set to zero
+    localStorage.setItem("ad_increment","0")
+}
+
+  var ad_increment_temp = (ad_increment)+0;               //add a digit to the tracking variable on every refresh
+
+  localStorage.setItem("ad_increment",ad_increment_temp)  //update that tracking variable in local storage
+
+if (ad_increment.length >=6){                             //if tracking variable is more than 6 digits reset to 1 digital and show interstitial ad
+  localStorage.setItem("ad_increment","0")
+  admob.interstitial.show()  
+}
+
 }
 
 function loadmap() {
@@ -201,7 +219,8 @@ function checkstatus () {
   }
  
   clear ();
-  
+
+ 
 }
 
 function clear () {
