@@ -113,4 +113,4 @@ fprintf(filePh,'%s\n',Y);
 fclose(filePh);
 
 
-system('type text1.txt bands.txt text2.txt artists.txt venues.txt text3.txt >www/complete.html')
+system('type text1.txt bands.txt text2.txt artists.txt venues.txt text3.txt >www/index.html')
