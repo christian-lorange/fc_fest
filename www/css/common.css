@@ -4,6 +4,7 @@ html {overflow-x: hidden;
 }
 
 body {overflow-x: hidden;
+  background-color: #fcc60f;
 
 }
 
@@ -181,8 +182,8 @@ tr {
     box-shadow: 0 0 1rem transparentize( black, 0.9 );
 }
 
-tr:nth-child(even) {background: #135A32}
-tr:nth-child(odd) {background: #C5C176}
+tr:nth-child(even) {background: #ed1c24}
+tr:nth-child(odd) {background: #1b75bc}
 
 td {
     display: inline-block;
@@ -254,7 +255,7 @@ padding-top: 5px;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 font-weight: bold;
-background-color: #879758;
+background-color: #fcc60f;
 font-size: 0.9em;
 }
 
@@ -275,7 +276,7 @@ padding-top: 3px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border-radius: 40px;
 font-weight: bolder;
-background-color: #879758;
+background-color: #fcc60f;
 font-size: 0.9em;
 }
 
@@ -388,7 +389,7 @@ td.bottomrow button {
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #135A32;
+  background-color: #ed1c24;
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
@@ -417,7 +418,7 @@ a.topnav_link {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 3.5vw;
-  background-color: #C5C176;
+  background-color: #1b75bc;
   border-color: #000;
   border-style: solid;
   margin-bottom: 3px;
@@ -596,11 +597,11 @@ padding: 10px;}
 
 /*FAQ Panels*/
 .panel-default>.panel-heading {
-  background-color: #879758; */
+  background-color: #fcc60f; */
 }
 
 .panel-group .panel {
-  background-color: #C5C176;
+  background-color: #1b75bc;
 }
 
 h4.panel-title {
@@ -613,8 +614,8 @@ h4.panel-title {
 
 /* External Buttons */
 .external_btn {
-  background:linear-gradient(to bottom, #135a32 5%, #879758 100%);
-  background-color:#135a32;
+  background:linear-gradient(to bottom, #ed1c24 5%, #fcc60f 100%);
+  background-color:#ed1c24;
   border-radius:28px;
   display:inline-block;
   color:#000000;
@@ -626,6 +627,7 @@ h4.panel-title {
 /* Sponsor Images */
 .sponsor_row {
   padding-bottom:10px;
+  text-align: center;
 }
 
 .sponsor_col {
@@ -633,6 +635,7 @@ h4.panel-title {
     margin: 0;
     float: left;
     margin-left: 3%;
+    text-align: center;
 }
 
 img.sponsor_img {
@@ -664,4 +667,12 @@ img.link_img {
 .mySelector.leaflet-control {
   font-size: 6vw;
   font-family: "Raleway";
+}
+
+th#FIRST_select {
+  color:white;
+}
+
+th.table-filterable {
+  color:white;
 }

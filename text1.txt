@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" ng-app="personList">
+<head>
+	<title>FoCo MX Music Schedule</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="googlebot" content="noindex, nofollow">
+      <meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/common.css">
+
+ <script src="js/admob2.js"></script>
+ <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+     <script src="js/jquery-3.2.1.js"></script>
+
+
+
+  <script src="js/bootstrap.js"></script>
+   	<script src="js/app.js"></script>
+    <script src="js/table.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+
+
+   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+   integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+   crossorigin=""></script> 
+
+
+
+
+
+	
+
+
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<!--Reload page after 10 minutes -->
+<script type="text/javascript">
+setTimeout("CallButton()",600000)
+function CallButton()
+{
+  location.reload()   
+}
+</script>
+
+
+
+</head>
+
+
+
+<body onload="checkstatus()">
+
+
+
+
+<div class="topnav" id="myTopnav">
+  <a href="# onclick="nav_function()" style="pointer-events: none;"><img src="img/pick.png" alt="FoCoMX logo" id="nav_image">    FoCoMX 2019</a>
+  <a href="#schedule" onclick="nav_function();schedule()" class="topnav_link">Shows</a>
+  <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link">My Show List</a>
+  <a href="#foco" onclick="nav_function();foco()" class="topnav_link">About</a>
+  <a href="#map" onclick="nav_function();loadmap();map_int()" class="topnav_link">Map</a>
+  <a href="#sponsors" onclick="nav_function();sponsors()" class="topnav_link">Sponsors</a>
+  <a href="#social" onclick="nav_function();social()" class="topnav_link">Social</a>
+  <a href="javascript:void(0);" class="icon" onclick="nav_function()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+<div class="navLinks" id="foco">
+<section  class="wide">
+
+<div style="font-size: 0.9em; text-align: center; padding-left:5px; padding-right: 8px;">
+<h3>FoCoMX 2019</h3>
+<p>The Fort Collins Musicians Association (FoCoMA) is proud to present the 11th Annual Fort Collins Music eXperiment (FoCoMX) on April 26 & 27, 2019.</p>
+<p>We are so lucky to have such a vibrant scene that is supported by music lovers and our community at large. Thank you to everyone for making such an event possible! FoCoMX, presented by the nonprofit Fort Collins Musicians Association (FoCoMA) is 2-day festival with well over 200 artists. Afternoon and evening performances offer a wealth of family-friendly programming. Later-evening performances feature rock, singer-songwriter, bluegrass, funk, reggae and more.</p>
+<p>FoCoMX started in 2009 as a grassroots experiment in promoting local music. The festival has grown over the years and we now see attendance of approximately 5500  and has garnering national attention and earning FoCoMX the unofficial title of “The Biggest Little Festivalin America.”  </p>
+
+<a href="http://bit.ly/FoCoMX11_BlindFaith" target="_blank" class="external_btn">Buy Tickets!</a> 
+<a href="https://www.focoma.org" target="_blank" class="external_btn">Volunteer</a> 
+</br></br>
+<!--<h4>Frequently Asked Questions</h4>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading1">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                     At what age does a child need to purchase a wristband?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+            <div class="panel-body">
+                <p>If children are attending the festival itself and going to venues, they do need a wristband no matter how young they are, as they would still be counted towards legal occupancy at the venues. Wristbands are required for all venues, including all-ages venues, the museum, and, any non-childrens' programming. Wristbands for children are the same price as those for adults because, as part of our mission, we're trying to pay the artists fairly for playing.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading2">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    FAQ 2
+                </a>
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+            <div class="panel-body">
+                <p>sdfasdf</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading3">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    FAQ 3
+                </a>
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+            <div class="panel-body">
+                <p>sdfasdf</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading4">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    FAQ 4
+                </a>
+            </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+            <div class="panel-body">
+                <p>asdfasdf</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading5">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    FAQ 5
+                </a>
+            </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+            <div class="panel-body">
+                <p>sfsafsdf</p>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<h3>About the Fort Collins Musicians Association</h3>
+<p>The Fort Collins Musicians Association’s nonprofit mission is to provide education, support and networking opportunities to the Fort Collins (and surrounding) music community.</p>
+<p>FoCoMA.org provides education, support, and networking opportunities for the Fort Collins music community.</p>
+<a href="https://www.focoma.org" target="_blank" class="external_btn">Learn About the FoCoMA</a> 
+</div>
+
+
+
+   
+</section>
+</div>
+
+<div class="navLinks" id="social">
+<section  class="wide">
+<div class="twitter_respond" ><img src="img/twitter-bird-white.png" alt="web logo" style="height: 30px">
+<a href="https://twitter.com/intent/tweet?hashtags=focomx19%2C&ref_src=twsrc%5Etfw&tw_p=tweetbutton">Tweet #FoCoMX2019</a>
+
+</div>    
+<div class="twitter_div">
+<a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/FoCoMX?ref_src=twsrc%5Etfw">Tweets by FoCoMX</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+
+</section>
+</div>
+
+
+<div class="navLinks" id="schedule">
+<section id="schedule" class="wide">
+
+<h1 class="headers">Schedule</h1>
+
+
+<input id="myInput" type="text" value="" placeholder="Type to Filter"/><button id="clearbutton" onclick="document.getElementById('myInput').value = ''">&#9940;</button>
+
+
+<TABLE ID="SECOND" class="table-autosort table-autofilter SECOND cards-table"> 
+  <thead>
+                        <tr>
+                          <th style="display:none;">ID</th>
+                            <th class="table-filterable" id="SECOND_select">Day &#160;</th>
+                            <th class="table-filterable">Time Slot &#160;</th>
+                            <th style="display:none;">Venue</th>
+                            <th style="display:none;">Style</th>
+                            <th style="display:none;">Band</th>
+                            <th style="display:none;">Learn More</th>
+                            <th style="display:none;" ></th>
+                        </tr>
+                    </thead>
+<tbody>
+       

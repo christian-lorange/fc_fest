@@ -1,0 +1,277 @@
+<!-- END OF VENUE CARDS -->
+     
+</div>
+
+</div>
+
+
+<div class="navLinks" id="mapdiv">
+<section id="maps" class="wide">
+  <h1 class="headers">Locations</h1>
+  <div id="mapid" ></div>
+
+</section>
+</div>
+
+<div class="navLinks" id="sponsors">
+<section id="sponsor" class="wide">
+  <h1 class="headers">Sponsors</h1>
+ 
+ <p>We'd like to thank the many sponsors to help make this event possible. FoCoMX would not be possible without you.</p>
+ <p>Learn more about the local businesses and organizations that sponsor FoCoMX and FoCoMA.org by clicking the images below.</p>
+
+<div class="container-fluid">
+    <div class="row sponsor_row" >
+<h2>Title Sponsor</h2>
+       <div class="sponsor_col" style="width:90%"><a href="http://www.focoma.org/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/focoma_logo_transparent_1276x904_0.png?itok=6ENd_0Ar" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+
+    </div>
+    <div class="row sponsor_row" >
+<h2>Platinum Sponsor</h2>
+       <div class="sponsor_col" style="width:90%"><a href="http://odellbrewing.com/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/Odell_Logo_Leaf%20NoFortCollins_2Color%20copy.png?itok=__ceoBX1" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+
+    </div>
+    <div class="row sponsor_row" >
+<h2>Gold Sponsor</h2>
+       <div class="sponsor_col"><a href="http://www.bohemianfoundation.org/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/BOFO-logo-black-PNG.png?itok=f7LltPHu" alt="FoCoMX logo" class="sponsor_img"></a></div>
+<div class="sponsor_col"><a href="https://www.fcgov.com/fortfund/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/download.png?itok=YcB_tAF8" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+        
+    </div>
+
+    <div class="row sponsor_row" >
+<h2>Gold Media Sponsor</h2>
+      <div class="sponsor_col"><a href="http://coloradosound.org/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/105_5_logo_FINAL.png?itok=j3wbE30P" alt="FoCoMX logo" class="sponsor_img"></a></div>
+<div class="sponsor_col"><a href="http://scenenoco.com/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/Screen%20Shot%202018-03-16%20at%201.50.34%20PM.png?itok=AhR7_Lrh" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+        
+    </div>
+
+    <div class="row sponsor_row" >
+<h2>Silver Sponsor</h2>
+<div class="sponsor_col"><a href="https://www.colostate.edu/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/csu-ram-greengold.png?itok=ckhErgmP" alt="FoCoMX logo" class="sponsor_img"></a></div>
+<div class="sponsor_col"><a href="https://www.decibullz.com/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/DBZ-Logo-Primary-Black%20%281%29.png?itok=aExYD_30" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+        
+    </div>
+
+    <div class="row sponsor_row" >
+<div class="sponsor_col"><a href="http://www.independentav.com/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/Screen%20shot%202013-02-28%20at%209.31.12%20AM.png?itok=pXPV-2bM" alt="FoCoMX logo" class="sponsor_img"></a></div>
+<div class="sponsor_col"><a href="http://organicalternatives.com/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/Organic%20Alternatives%20-%20Colorado%20Logo%20copy.png?itok=oAij-qDi" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+        
+    </div>
+
+    <div class="row sponsor_row" >
+<div class="sponsor_col"><a href="https://www.spacesworks.com/fort-collins/linden-street/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/4056935654.png?itok=DepZCUt7" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+        
+    </div>
+    <div class="row sponsor_row" >
+<h2>Silver Media Sponsor</h2>
+<div class="sponsor_col"><a href="http://www.radio949.com/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/Radio%2094.9_1.jpg?itok=YITwdPTc" alt="FoCoMX logo" class="sponsor_img"></a></div>
+<div class="sponsor_col"><a href="https://www.kgnu.org/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/kgnu-logo-blue-RGB.jpg?itok=0Nqz0JPK" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+        
+    </div>
+
+   <div class="row sponsor_row" >
+<div class="sponsor_col"><a href="https://www.krfcfm.org/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/Logo-Color%28DB%29.jpg?itok=aYK9dxrl" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+        
+    </div>
+
+   <div class="row sponsor_row" >
+<h2>Bronze Sponsor</h2>
+<div class="sponsor_col"><a href="https://www.bestwestern.com/en_US/book/hotel-rooms.06040.html?groupId=Y89DF1Z0" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/BW%20University.png?itok=tGIQ8HId" alt="FoCoMX logo" class="sponsor_img"></a></div>
+<div class="sponsor_col"><a href="http://www.downtownfortcollins.com/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/DBA%20Logo%20Blue.png?itok=2Un0GW5_" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+        
+    </div>
+
+   <div class="row sponsor_row" >
+<div class="sponsor_col"><a href="https://www.fnbo.com/business-digital-banking/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/CMYK_CSU_H_Green%20copy.png?itok=cwGbaZ3X" alt="FoCoMX logo" class="sponsor_img"></a></div>
+<div class="sponsor_col"><a href="http://www.justgowest.com/" target="_blank"><img src="https://focomx.focoma.org/sites/default/files/styles/sponsor_page/public/Go%20West.png?itok=dADKv_nE" alt="FoCoMX logo" class="sponsor_img"></a></div>
+
+        
+    </div>
+
+   <div class="row sponsor_row" >
+<h2>Green Room Sponsor</h2>
+<div class="sponsor_col"><a href="http://www.aloterraservices.com/" target="_blank">AloTerra Restoration Services</a></div><div class="sponsor_col"><a href="https://www.artlabfortcollins.org/" target="_blank">Art Lab</a></div>
+
+        
+    </div>
+
+   <div class="row sponsor_row" >
+<div class="sponsor_col"><a href="https://chebahut.com/" target="_blank">Cheeba Hut Toasted Subs</a></div><div class="sponsor_col"><a href="http://cubepasses.com/" target="_blank">CUBE Backstage Passes</a></div>
+
+        
+    </div>
+
+  <div class="row sponsor_row" >
+<div class="sponsor_col"><a href="http://www.hornerpainting.com/" target="_blank">Horner Painting</a></div><div class="sponsor_col"><a href="http://www.littleguys.com/" target="_blank">Little Guy Movers</a></div>
+
+        
+    </div>
+
+  <div class="row sponsor_row" >
+<div class="sponsor_col"><a href="http://www.marcleverettephotography.com/" target="_blank">Marc Leverette Photography</a></div><div class="sponsor_col"><a href="http://www.focoma.org/" target="_blank">Mueller Family</a></div>
+
+        
+    </div>
+
+  <div class="row sponsor_row" >
+<div class="sponsor_col"><a href="https://www.syntaxspirits.com/" target="_blank">Syntax Spirits</a></div><div class="sponsor_col"><a href="http://www.dfccd.org/" target="_blank">Downtown Creative District Fort Collins</a></div>
+
+
+        
+    </div>
+
+  <div class="row sponsor_row" >
+<div class="sponsor_col"><a href="http://www.highergroundrehearsalstudios.com/" target="_blank">Higher Ground Rehearsal Studios</a></div>
+
+
+        
+    </div>
+
+
+</div>
+
+
+
+
+</section>
+</div>
+ 
+
+<script type="text/javascript">
+    document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    window.open = cordova.InAppBrowser.open;
+}
+
+</script>
+
+
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($) {
+  // Scroll to the desired section on click
+  // Make sure to add the `data-scroll` attribute to your `<a>`          tag.
+  // Example: 
+  // `<a data-scroll href="#my-section">My Section</a>` will scroll to an element with the id of 'my-section'.
+  function scrollToSection(event) {
+
+    event.preventDefault();
+    var $section = $($(this).attr('href')); 
+    $('html, body').animate({
+      scrollTop: $section.offset().top
+    }, 500);
+  }
+  $('[data-scroll]').on('click', scrollToSection);
+}(jQuery));
+
+</script>
+
+ <script type="text/javascript">
+        function filterTable(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#SECOND tbody").rows;
+    
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+        var fourthCol = rows[i].cells[3].textContent.toUpperCase();
+        var fifthCol = rows[i].cells[4].textContent.toUpperCase();
+        var sixthCol = rows[i].cells[5].textContent.toUpperCase();
+          if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1 || fourthCol.indexOf(filter) > -1 || fifthCol.indexOf(filter) > -1 || sixthCol.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
+
+}
+
+
+
+ function filterTable2(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#FIRST tbody").rows;
+    
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+        var fourthCol = rows[i].cells[3].textContent.toUpperCase();
+        var fifthCol = rows[i].cells[4].textContent.toUpperCase();
+        var sixthCol = rows[i].cells[5].textContent.toUpperCase();
+          if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1 || fourthCol.indexOf(filter) > -1 || fifthCol.indexOf(filter) > -1 || sixthCol.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
+
+}
+
+
+
+
+function sortT(){
+
+    var tbl = document.getElementById("FIRST").tBodies[0];
+    var store = [];
+    for(var i=0, len=tbl.rows.length; i<len; i++){
+        var row = tbl.rows[i];
+        var sortnr = parseFloat(row.cells[0].textContent || row.cells[0].innerText);
+        if(!isNaN(sortnr)) store.push([sortnr, row]);
+    }
+    store.sort(function(x,y){
+        return x[0] - y[0];
+    });
+    for(var i=0, len=store.length; i<len; i++){
+        tbl.appendChild(store[i][1]);
+    }
+    store = null;
+
+}
+
+
+
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+document.querySelector('#clearbutton').addEventListener('click', filterTable, false);
+
+document.querySelector('#myInput2').addEventListener('keyup', filterTable2, false);
+document.querySelector('#clearbutton2').addEventListener('click', filterTable2, false);
+
+
+    </script>
+
+
+
+<script src="js/mapresources.js"></script>
+
+<p style="text-align: center;margin: auto; width: 100vw; background: #242424; color: white; font-size: 0.7em;height: 30px;" onclick="window.open('http://onelink.to/zdbmb8')">FoCOMX 2019 - App Development Donated by OrangeHouse LLC. Check out our other mobile apps by clicking here.</p>
+<!--<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/admob2.js"></script>
+<script type="text/javascript" src="phonegap.js"></script>-->
+
+<!--Script to change _blank hrefs to exteral  -->
+<script type="text/javascript">
+    $("a[target='_blank']").click(function(e){
+  e.preventDefault();
+  window.open($(e.currentTarget).attr('href'), '_system', '');
+});
+</script>
+	
+
+
+</body>
+</html>
