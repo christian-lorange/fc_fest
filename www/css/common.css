@@ -543,10 +543,10 @@ p.artist  {
   font-size: 0.8em;
 }
 
-img.artist {width: 80%;}
+img.artist {}
 
 img.artist_img {
-  max-width:80%;
+ 
   max-height:300px;
   width: auto;
   height: auto;
@@ -659,9 +659,10 @@ img.sponsor_img {
 
 /* Facebook and web links */
 img.link_img {
-  width:33%;
+  width:100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 /* Twitter */
@@ -700,4 +701,10 @@ A[href=""], A[href="#"] {
 /*Reduce size of selector */
 .mySelector.leaflet-control {
   max-width: 70vw;
+}
+
+
+
+div#no_shows {
+  display: none;
 }

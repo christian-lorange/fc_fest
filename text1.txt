@@ -71,7 +71,7 @@ function CallButton()
 
 
 <div class="topnav" id="myTopnav">
-  <a href="#" onclick="nav_function()" style="pointer-events: none;"><img src="img/pick.png" alt="FoCoMX logo" id="nav_image">    FoCoMX 2019</a>
+  <a href="#" onclick="nav_function()" style="pointer-events: none;display: block;"><img src="img/pick.png" alt="FoCoMX logo" id="nav_image">    FoCoMX 2019</a>
   <a href="#schedule" onclick="nav_function();schedule()" class="topnav_link">Shows</a>
   <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link" style="display: none" id="myshowsnav">My Show List</a>
   <a href="#foco" onclick="nav_function();foco()" class="topnav_link">About</a>

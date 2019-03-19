@@ -48,7 +48,7 @@ s1="<div class=@mySlides@><h2 class=@artist@>"; %artist
 s2="</h2><h3 class=@artist@>";                  %Style
 s3="</h3><p class=@artist@>";                   %Bio
 s4="<div class=@artist_img_div@><img src=@";    %image
-s5="@ alt=@web logo@ class=@artist_img@ width=@200@></div><img><div><a href=@"; %music player
+s5="@ alt=@web logo@ class=@artist_img@ width=@200@></div><img><div class=@artist@><a href=@"; %music player
 s6="@ target=@_blank@ ><img src=@img/listen.png@class=@link_img@></a></div><h3 class=@artist@ style=@font-size:0.95em;@>Learn More About the Artist</h3><div class=@artist@><a href=@"; %facebook
 s7="@ target=@_blank@ title=@@><img src=@img/facebook.png@ alt=@facebook logo@ class=@link_img@></a></div><div class=@artist@><a href=@";   %website
 s8="@ target=@_blank@ title=@@><img src=@img/web.png@ alt=@web logo@ class=@link_img@></a></div></div>";

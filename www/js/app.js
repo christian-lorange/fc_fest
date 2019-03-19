@@ -152,16 +152,13 @@ document.getElementById('myInput').value = '';
 }
 
 function my_favs() {
-location.reload()
+
+window.location.reload(false)
+var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
  if (rows >= 2) {
     my_favs2();
   }
   
-  navigator.notification.alert(
-    'You have not added anything to your list yet. Click the heart symbol to add a show to your personal list.',  // message
-    alertDismissed,         // callback
-    'Add shows to your list',            // title
-    'Okay'    )              // buttonName
 }
 
 function my_favs2() {
@@ -169,7 +166,7 @@ hide();
 document.getElementById('fav').style.display = 'block';
 document.getElementById('myInput2').value = '';   
 document.getElementById('myshowsnav').style.display = '';
-document.getElementById('no_shows').style.display = 'none';
+
 
 
 // Showing interstitial ad after 5 times going to "my show page"
@@ -226,6 +223,8 @@ function checkstatus () {
   var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
   if (rows >= 2) {
     my_favs2();
+  } else {
+    document.getElementById('no_shows').style.display = 'block';
   }
  
   clear ();
