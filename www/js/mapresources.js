@@ -349,7 +349,7 @@ var markerLayer = L.geoJson(stations, {
     {
         layer.bindPopup("<b>" + feature.properties.STATION + "</b><br>");
     }
-},{icon: greenIcon}).addTo(map);
+}).addTo(map);
 map.fitBounds(markerLayer.getBounds());
 
 ////////////////////////////////////////////////////////////////////////////////////////////
