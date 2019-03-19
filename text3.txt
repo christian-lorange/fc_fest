@@ -98,6 +98,7 @@
         
     </div>
 
+    <div style="background-color:green">
    <div class="row sponsor_row" >
 <h2>Green Room Sponsor</h2>
 <div class="sponsor_col"><a href="http://www.aloterraservices.com/" target="_blank">AloTerra Restoration Services</a></div><div class="sponsor_col"><a href="https://www.artlabfortcollins.org/" target="_blank">Art Lab</a></div>
@@ -136,7 +137,7 @@
 
         
     </div>
-
+    </div>
 
 </div>
 

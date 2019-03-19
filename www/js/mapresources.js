@@ -115,16 +115,7 @@ var stations = {
     }
   },
  {"type": "Feature","properties": {
-      "STATION": "Fort Collins Museum of Discovery - Exhibit Hall",
-      "ST_CODE": "MGRP",
-    },
-    "geometry": {
-      "type": "Point",
-      "coordinates": [-105.07796,40.59349]
-    }
-  },
- {"type": "Feature","properties": {
-      "STATION": "Fort Collins Museum of Discovery - Otter Box Digital Dome Theater",
+      "STATION": "Fort Collins Museum of Discovery",
       "ST_CODE": "MGRP",
     },
     "geometry": {
@@ -196,7 +187,7 @@ var stations = {
     }
   },
  {"type": "Feature","properties": {
-      "STATION": "The Music District - Living Room",
+      "STATION": "The Music District",
       "ST_CODE": "MGRP",
     },
     "geometry": {
@@ -204,26 +195,8 @@ var stations = {
       "coordinates": [-105.07766,40.57873]
     }
   },
- {"type": "Feature","properties": {
-      "STATION": "The Music District - Media Library",
-      "ST_CODE": "MGRP",
-    },
-    "geometry": {
-      "type": "Point",
-      "coordinates": [-105.07766,40.57873]
-    }
-  },
- {"type": "Feature","properties": {
-      "STATION": "New Belgium Brewing Co. - Outside",
-      "ST_CODE": "MGRP",
-    },
-    "geometry": {
-      "type": "Point",
-      "coordinates": [-105.06687,40.59341]
-    }
-  },
- {"type": "Feature","properties": {
-      "STATION": "New Belgium Brewing Co. - Tasting Room",
+  {"type": "Feature","properties": {
+      "STATION": "New Belgium Brewing Co",
       "ST_CODE": "MGRP",
     },
     "geometry": {
@@ -304,7 +277,7 @@ var stations = {
     }
   },
  {"type": "Feature","properties": {
-      "STATION": "Sound Off Silent Disco at Old Town Square",
+      "STATION": "Sound Off Silent Disco",
       "ST_CODE": "MGRP",
     },
     "geometry": {
@@ -358,7 +331,7 @@ var stations = {
     }
   },
  {"type": "Feature","properties": {
-      "STATION": "Wolverine Farm Letterpress & Publick House",
+      "STATION": "Wolverine Farm",
       "ST_CODE": "MGRP",
     },
     "geometry": {
@@ -376,7 +349,7 @@ var markerLayer = L.geoJson(stations, {
     {
         layer.bindPopup("<b>" + feature.properties.STATION + "</b><br>");
     }
-}).addTo(map);
+},{icon: greenIcon}).addTo(map);
 map.fitBounds(markerLayer.getBounds());
 
 ////////////////////////////////////////////////////////////////////////////////////////////

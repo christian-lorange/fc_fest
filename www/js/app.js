@@ -168,6 +168,9 @@ function my_favs2() {
 hide();
 document.getElementById('fav').style.display = 'block';
 document.getElementById('myInput2').value = '';   
+document.getElementById('myshowsnav').style.display = '';
+document.getElementById('no_shows').style.display = 'none';
+
 
 // Showing interstitial ad after 5 times going to "my show page"
 

@@ -2,6 +2,8 @@ clear all
 
 data=readtable('bands.xlsx');
 
+%% Show Table
+
 s1="<tr class=@content@><td class=@sortnr@ style=@display:none;@>";                                     %ID
 s2="</td><td class=@tpl@>";                                                                             %Day
 s3="</td><td class=@tpr@>";                                                                             %Time
@@ -40,12 +42,13 @@ filePh = fopen('bands.txt','w');
 fprintf(filePh,'%s\n',Y);
 fclose(filePh);
 
+%% Artist Details
 
 s1="<div class=@mySlides@><h2 class=@artist@>"; %artist
 s2="</h2><h3 class=@artist@>";                  %Style
 s3="</h3><p class=@artist@>";                   %Bio
 s4="<div class=@artist_img_div@><img src=@";    %image
-s5="@ alt=@web logo@ class=@artist_img@></div><img><div><a href=@"; %music player
+s5="@ alt=@web logo@ class=@artist_img@ width=@200@></div><img><div><a href=@"; %music player
 s6="@ target=@_blank@ ><img src=@img/listen.png@class=@link_img@></a></div><h3 class=@artist@ style=@font-size:0.95em;@>Learn More About the Artist</h3><div class=@artist@><a href=@"; %facebook
 s7="@ target=@_blank@ title=@@><img src=@img/facebook.png@ alt=@facebook logo@ class=@link_img@></a></div><div class=@artist@><a href=@";   %website
 s8="@ target=@_blank@ title=@@><img src=@img/web.png@ alt=@web logo@ class=@link_img@></a></div></div>";
@@ -78,20 +81,21 @@ filePh = fopen('artists.txt','w');
 fprintf(filePh,'%s\n',Y);
 fclose(filePh);
 
-
+%% Venue Details
 
 v=readtable('venues2.xlsx');
 
 s1="<div class=@mySlides@><h2 class=@artist@>"; %Venue
 s2="</h2><h3 class=@artist@>";                   %Address
 s3="</h3><p class=@artist@><img src=@";          %logo
-s4="@ alt=@FocoBanner@ style=@width: 100%;@></p></div>";
+s4="@ alt=@FocoBanner@ style=@width: 100%;@></p><p style=@font-size:1.8em;@>";
+s5="</p></div>";
 
 venue=[];
 
 for i=1:height(v)
     
-    page=strcat(s1,char(table2array(v(i,1))),s2,char(table2array(v(i,6))),s3,char(table2array(v(i,4))),s4);
+    page=strcat(s1,char(table2array(v(i,1))),s2,char(table2array(v(i,6))),s3,char(table2array(v(i,4))),s4,char(table2array(v(i,5))),s5);
     
     
     venue=[venue;page];

@@ -4,7 +4,7 @@ html {overflow-x: hidden;
 }
 
 body {overflow-x: hidden;
-  background-color: #fcc60f;
+  background-color: white;
 
 }
 
@@ -170,8 +170,21 @@ img.hover-shadow {
 }
 
 thead {
-    
+  border-bottom: 
+    5px solid #fcc60f;
 }
+
+table thead tr{
+    display:block;
+}
+
+table  tbody{
+  display:block;
+  height:400px;
+  overflow:auto;//set tbody to auto
+}
+
+
 
 tr {
     display: block;
@@ -394,7 +407,7 @@ td.bottomrow button {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%;
-  background-image: url(../img/green_geometric.jpg);
+
   z-index: 99999;
 
 }
@@ -614,14 +627,16 @@ h4.panel-title {
 
 /* External Buttons */
 .external_btn {
-  background:linear-gradient(to bottom, #ed1c24 5%, #fcc60f 100%);
+  background:linear-gradient(to bottom, #ed1c24 5%, black 100%);
   background-color:#ed1c24;
   border-radius:28px;
   display:inline-block;
-  color:#000000;
+  color:#FFF;
   font-size:4vw;
   padding:16px 31px;
   text-decoration:none;
+  margin-top:3px;
+  min-width: 50vw;
 }
 
 /* Sponsor Images */
@@ -675,4 +690,14 @@ th#FIRST_select {
 
 th.table-filterable {
   color:white;
+}
+
+/* Hide empty href links*/
+A[href=""], A[href="#"] {
+  display: none;
+}
+
+/*Reduce size of selector */
+.mySelector.leaflet-control {
+  max-width: 70vw;
 }

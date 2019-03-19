@@ -7,13 +7,14 @@
 <section id="favorites" class="wide">
   <h1 class="headers">My Shows</h1>
 
+
 <input id="myInput2" type="text" value="" placeholder="Type to Filter"/><button id="clearbutton2" onclick="document.getElementById('myInput2').value = ''">&#9940;</button> 
   <TABLE ID="FIRST" class="table-autosort table-autofilter FIRST cards-table">
   <thead>
                         <tr>
                           <th style="display:none;">ID</th>
                             <th class="table-filterable" id="FIRST_select">Day   </th>
-                            <th class="table-filterable">Time Slot</th>
+                            <th class="table-filterable">Time</th>
                             <th style="display:none;">Venue</th>
                             <th style="display:none;">Style</th>
                             <th style="display:none;">Band</th>

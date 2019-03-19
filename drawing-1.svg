@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="145.62655"
+     inkscape:cx="-105.08774"
      inkscape:cy="548.09862"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,40 +53,44 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.45529544;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.49004626;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4772-6"
-       width="84.666672"
+       width="88.758438"
        height="117.92857"
-       x="6.4255939"
+       x="-2.9087527"
        y="175.29167"
        ry="17.386906"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103" />
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\facebook.png" />
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.38686144;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.41997814;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4772-7"
-       width="84.716438"
+       width="88.810616"
        height="107.03545"
-       x="18.11797"
+       x="9.3486919"
        y="19.52216"
        ry="15.780871"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103" />
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\listen.png" />
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.45529532;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.49004614;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4772"
-       width="84.666672"
+       width="88.758438"
        height="117.92857"
-       x="114.90476"
+       x="110.813"
        y="15.785714"
        ry="17.386906"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103" />
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\web.png" />
     <g
        id="g4548"
-       transform="matrix(2.7109127,0,0,2.7109127,27.945238,-2746.9905)"
+       transform="matrix(2.7109127,0,0,2.7109127,21.223047,-2746.9905)"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103">
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\listen.png">
       <path
          id="path4518"
          d="m 19,1040.4 v 2 8 2 h -1 -0.5 c -0.828,0 -1.5,-0.7 -1.5,-1.5 v -2 -0.5 -2 -2 -0.5 -2 c 0,-0.9 0.672,-1.5 1.5,-1.5 H 18 Z"
@@ -171,9 +175,10 @@
     </g>
     <g
        id="g4618"
-       transform="matrix(2.4379464,0,0,2.4379464,9.7517873,192.98096)"
+       transform="matrix(2.4379464,0,0,2.4379464,2.463324,192.98096)"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103">
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\facebook.png">
       <g
          id="g4588">
         <circle
@@ -203,9 +208,10 @@
     </g>
     <g
        id="g4716"
-       transform="matrix(1.2095238,0,0,1.2095238,118.53334,33.77738)"
+       transform="matrix(1.2095238,0,0,1.2095238,116.48746,33.77738)"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103">
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\web.png">
       <g
          id="Layer_1">
         <g
@@ -345,79 +351,85 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:52.91666412px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="21.284784"
+       x="14.562593"
        y="38.086308"
        id="text4720"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103"><tspan
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\listen.png"><tspan
          sodipodi:role="line"
          id="tspan4718"
-         x="21.284784"
+         x="14.562593"
          y="38.086308"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.875px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Listen to</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:52.91666794px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="27.497583"
+       x="20.775393"
        y="119.27414"
        id="text4720-8"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103"><tspan
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\listen.png"><tspan
          sodipodi:role="line"
          id="tspan4718-9"
-         x="27.497583"
+         x="20.775393"
          y="119.27414"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.875px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Sample</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:52.91666794px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="137.50287"
+       x="135.457"
        y="31.886061"
        id="text4720-0"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103"><tspan
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\web.png"><tspan
          sodipodi:role="line"
          id="tspan4718-6"
-         x="137.50287"
+         x="135.457"
          y="31.886061"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.875px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Visit</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:52.91666794px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="121.21704"
+       x="119.17117"
        y="126.75809"
        id="text4720-4"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103"><tspan
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\web.png"><tspan
          sodipodi:role="line"
          id="tspan4718-3"
-         x="121.21704"
+         x="119.17117"
          y="126.75809"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.875px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Website</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:52.91666794px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="29.023701"
+       x="21.735237"
        y="192.60152"
        id="text4720-47"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103"><tspan
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\facebook.png"><tspan
          sodipodi:role="line"
          id="tspan4718-8"
-         x="29.023701"
+         x="21.735237"
          y="192.60152"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.875px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Visit</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:52.91666794px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="5.8778262"
+       x="-1.4106371"
        y="283.84494"
        id="text4720-46"
        inkscape:export-xdpi="300.103"
-       inkscape:export-ydpi="300.103"><tspan
+       inkscape:export-ydpi="300.103"
+       inkscape:export-filename="C:\Users\clorange\Dropbox\CLD\Orange House\FoCoMX\2019 App\www\img\facebook.png"><tspan
          sodipodi:role="line"
          id="tspan4718-81"
-         x="5.8778262"
+         x="-1.4106371"
          y="283.84494"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.875px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.26458332">Facebook</tspan></text>
   </g>
