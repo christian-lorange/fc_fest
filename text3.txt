@@ -259,10 +259,10 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
 <script src="js/mapresources.js"></script>
 
 <p style="text-align: center;margin: auto; width: 100vw; background: #242424; color: white; font-size: 0.7em;height: 30px;" onclick="window.open('http://onelink.to/zdbmb8')">FoCOMX 2019 - App Development Donated by OrangeHouse LLC. Check out our other mobile apps by clicking here.</p>
-<!--<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
 
 <script type="text/javascript" src="js/admob2.js"></script>
-<script type="text/javascript" src="phonegap.js"></script>-->
+<script type="text/javascript" src="phonegap.js"></script>
 
 <!--Script to change _blank hrefs to exteral  -->
 <script type="text/javascript">
