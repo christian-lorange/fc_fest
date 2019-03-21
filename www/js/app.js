@@ -68,6 +68,7 @@ function sortTable(){
 
 function openModal() {
   document.getElementById('myModal').style.display = "block";
+ 
 }
 
 function closeModal() {
@@ -225,6 +226,9 @@ function checkstatus () {
     my_favs2();
   } else {
     document.getElementById('no_shows').style.display = 'block';
+    document.getElementById('schedule').style.display = 'block';
+    document.getElementById('favorites.navLinks').style.display = 'none';
+    document.getElementById('schedule.navLinks').style.display = 'block';
   }
  
   clear ();
@@ -262,3 +266,4 @@ function clear () {
 
 
   }
+

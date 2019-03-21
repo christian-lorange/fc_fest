@@ -603,7 +603,7 @@ padding: 10px;}
 }
 
 
-#schedule.navLinks {
+#favorites.navLinks {
     display: block;
 }
 
@@ -708,3 +708,4 @@ A[href=""], A[href="#"] {
 div#no_shows {
   display: none;
 }
+
