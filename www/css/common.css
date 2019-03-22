@@ -31,7 +31,7 @@ table {
 
 table, td, th, input {
 	border-radius: 3px;
-	border: 1px solid #ddd;
+	border: 2px solid #ddd;
 	color: #555;
   font-size:3.5vw;
 	line-height: 25px;
@@ -171,7 +171,7 @@ img.hover-shadow {
 
 thead {
   border-bottom: 
-    5px solid #fcc60f;
+    5px solid #f9c30d;
 }
 
 table thead tr{
@@ -195,8 +195,8 @@ tr {
     box-shadow: 0 0 1rem transparentize( black, 0.9 );
 }
 
-tr:nth-child(even) {background: #ed1c24}
-tr:nth-child(odd) {background: #1b75bc}
+tr:nth-child(odd) {background: #cb1e26}
+tr:nth-child(even) {background: white}
 
 td {
     display: inline-block;
@@ -268,7 +268,7 @@ padding-top: 5px;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 font-weight: bold;
-background-color: #fcc60f;
+background-color: #f9c30d;
 font-size: 0.9em;
 }
 
@@ -289,7 +289,7 @@ padding-top: 3px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border-radius: 40px;
 font-weight: bolder;
-background-color: #fcc60f;
+background-color: #f9c30d;
 font-size: 0.9em;
 }
 
@@ -402,13 +402,14 @@ td.bottomrow button {
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #ed1c24;
+  background-color: #cb1e26;
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%;
 
   z-index: 99999;
+
 
 }
 
@@ -431,7 +432,7 @@ a.topnav_link {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 3.5vw;
-  background-color: #1b75bc;
+  background-color: #F9C30D;
   border-color: #000;
   border-style: solid;
   margin-bottom: 3px;
@@ -575,7 +576,8 @@ padding: 10px;}
 @media screen and (max-width: 1800px) {
   .topnav.responsive {
     position: fixed;
-    padding-bottom: 10px;}
+    padding-bottom: 10px;
+    border: solid 5px;}
   .topnav.responsive a.icon {
     position: fixed;
     right: 0;
@@ -610,7 +612,7 @@ padding: 10px;}
 
 /*FAQ Panels*/
 .panel-default>.panel-heading {
-  background-color: #fcc60f; */
+  background-color: #f9c30d; */
 }
 
 .panel-group .panel {
@@ -627,8 +629,8 @@ h4.panel-title {
 
 /* External Buttons */
 .external_btn {
-  background:linear-gradient(to bottom, #ed1c24 5%, black 100%);
-  background-color:#ed1c24;
+  background:linear-gradient(to bottom, #cb1e26 5%, black 100%);
+  background-color:#cb1e26;
   border-radius:28px;
   display:inline-block;
   color:#FFF;
@@ -707,5 +709,6 @@ A[href=""], A[href="#"] {
 
 div#no_shows {
   display: none;
+
 }
 

@@ -154,7 +154,7 @@ document.getElementById('myInput').value = '';
 
 function my_favs() {
 
-window.location.reload(false)
+window.location.reload()
 var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
  if (rows >= 2) {
     my_favs2();
@@ -222,6 +222,7 @@ function hide () {
 
 function checkstatus () {
   var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
+  console.log(rows)
   if (rows >= 2) {
     my_favs2();
   } else {
