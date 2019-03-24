@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="personList">
+<html lang="en">
 <head>
 	<title>FoCo MX Music Schedule</title>
 	<meta charset="UTF-8" />
@@ -21,8 +21,9 @@
 
 
   <script src="js/bootstrap.js"></script>
-   	<script src="js/app.js"></script>
-    <script src="js/table.js"></script>
+  <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 
 
 
@@ -60,6 +61,8 @@ function CallButton()
 
 
 
+
+
 </head>
 
 
@@ -75,7 +78,7 @@ function CallButton()
   <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link" style="display: none" id="myshowsnav">My Show List</a>
   <a href="#foco" onclick="nav_function();foco()" class="topnav_link">About</a>
   <a href="#map" onclick="nav_function();loadmap();map_int()" class="topnav_link">Map</a>
-  <a href="#sponsors" onclick="nav_function();sponsors()" class="topnav_link">Sponsors</a>
+  <a href="#sponsors" class="topnav_link">Sponsors</a>
   <a href="social.html" onclick="nav_function();social()" class="topnav_link">Social</a>
   <a href="javascript:void(0);" class="icon" onclick="nav_function()">
     <i class="fa fa-bars"></i>
@@ -90,7 +93,7 @@ function CallButton()
 <h3>FoCoMX 2019</h3>
 <p>The Fort Collins Musicians Association (FoCoMA) is proud to present the 11th Annual Fort Collins Music eXperiment (FoCoMX) on April 26 & 27, 2019.</p>
 <p>We are so lucky to have such a vibrant scene that is supported by music lovers and our community at large. Thank you to everyone for making such an event possible! FoCoMX, presented by the nonprofit Fort Collins Musicians Association (FoCoMA) is 2-day festival with well over 200 artists. Afternoon and evening performances offer a wealth of family-friendly programming. Later-evening performances feature rock, singer-songwriter, bluegrass, funk, reggae and more.</p>
-<p>FoCoMX started in 2009 as a grassroots experiment in promoting local music. The festival has grown over the years and we now see attendance of approximately 5500  and has garnering national attention and earning FoCoMX the unofficial title of &quotThe Biggest Little Festivalin America.&quot  </p>
+<p>FoCoMX started in 2009 as a grassroots experiment in promoting local music. The festival has grown over the years and we now see attendance of approximately 5500  and has garnering national attention and earning FoCoMX the unofficial title of &quot;The Biggest Little Festivalin America.&quot;  </p>
 
 <a href="http://bit.ly/FoCoMX11_BlindFaith" target="_blank" class="external_btn">Buy Tickets!</a> 
 <a href="https://focomx.focoma.org/volunteer" target="_blank" class="external_btn">Volunteer</a> 
@@ -127,7 +130,7 @@ function CallButton()
  
 <p>Wristbands are on sale NOW through the Thursday, before the festival on the Tickets page! Or you can pay cash on the day of the <a href="http://focomx.focoma.org/tickets" target="_blank" >festival</a> ($40) or at one of our pre-parties ($25).</p>
  
-<p>(Or get one for free by becoming one of our <a href="http://focomx.focoma.org/volunteer" target="_blank" ">volunteers!</a>) </p>
+<p>(Or get one for free by becoming one of our <a href="http://focomx.focoma.org/volunteer" target="_blank">volunteers!</a>) </p>
  
 <p>Wristbands purchased online will be available at the ticket sales / Will Call booth at SPACES in Old Town at 242 Linden St, Fort Collins, CO 80524 during FoCoMX. </p>
             </div>
@@ -309,7 +312,7 @@ function CallButton()
 
 </div>    
 <div class="twitter_div">
-<a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/FoCoMX?ref_src=twsrc%5Etfw">Tweets by FoCoMX</a> <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/FoCoMX?ref_src=twsrc%5Etfw">Tweets by FoCoMX</a><!--<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
 </div>
 
 
@@ -340,7 +343,7 @@ function CallButton()
                             <th style="display:none;">Style</th>
                             <th style="display:none;">Band</th>
                             <th style="display:none;">Learn More</th>
-                            <th style="display:none;" ></th>
+                            
                         </tr>
                     </thead>
 <tbody>
