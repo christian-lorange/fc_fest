@@ -78,7 +78,7 @@ function CallButton()
   <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link" style="display: none" id="myshowsnav">My Show List</a>
   <a href="#foco" onclick="nav_function();foco()" class="topnav_link">About</a>
   <a href="#map" onclick="nav_function();loadmap();map_int()" class="topnav_link">Map</a>
-  <a href="#sponsors" onclick="nav_function();social()" class="topnav_link">Sponsors</a>
+  <a href="#sponsors" onclick="nav_function();sponsors()" class="topnav_link">Sponsors</a>
   <a href="social.html" onclick="nav_function();social()" class="topnav_link">Social</a>
   <a href="javascript:void(0);" class="icon" onclick="nav_function()">
     <i class="fa fa-bars"></i>
