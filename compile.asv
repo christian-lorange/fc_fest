@@ -22,7 +22,7 @@ complete=[];
 
 for i=1:height(data)
     
-    artist=strcat(s1,num2str(table2array(data(i,1))),' hide-',num2str(table2array(data(i,18))),s1b,num2str(table2array(data(i,1))),s2,char(table2array(data(i,2))),s3,char(table2array(data(i,5))),s4,char(table2array(data(i,11))),s5,num2str(table2array(data(i,1))),s6,char(table2array(data(i,9))),s7,num2str(table2array(data(i,17))),s8,char(table2array(data(i,6))),s9);
+    artist=strcat(s1,num2str(table2array(data(i,1))),s1b,num2str(table2array(data(i,1))),s2,char(table2array(data(i,2))),s3,char(table2array(data(i,5))),s4,char(table2array(data(i,11))),s5,num2str(table2array(data(i,1))),s6,char(table2array(data(i,9))),s7,num2str(table2array(data(i,17))),s8,char(table2array(data(i,6))),s9);
     
     complete=[complete;artist];
     
@@ -46,32 +46,6 @@ fclose(filePh);
 
 %% Hide Blank Shows
 
-hide=[];
-s1='.show-'; %Add show ID
-s2=',';
-s3='{display:none;}';
-
-for i=1:height(data)
-   
-    if (table2array(data(i,18)))==0
-    
-    active=strcat(s1,num2str(table2array(data(i,1))),s2);
-    hide=[hide active];
-    end
-    
-end
-
-hide = hide(1:end-1);
-
-hide=[hide s3];
-
-filePh = fopen('hide.txt','w');
-fprintf(filePh,'%s\n',hide());
-fclose(filePh);
-
-
-
-system('type style.txt hide.txt >www/css/common.css');
 
 %% Artist Details
 
@@ -148,4 +122,4 @@ fprintf(filePh,'%s\n',Y);
 fclose(filePh);
 
 
-system('type text1.txt bands.txt text2.txt artists.txt venues.txt text3.txt >www/index.html');
+system('type text1.txt bands.txt text2.txt artists.txt venues.txt text3.txt >www/index.html')

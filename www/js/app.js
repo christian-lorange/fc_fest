@@ -32,13 +32,12 @@ $(function() {
    });
    $('#FIRST,#SECOND').on('click','a',function() {
      localStorage.setItem('FIRST',$('#FIRST').html());
-     localStorage.setItem('SECOND',$('#SECOND').html());
+     /*localStorage.setItem('SECOND',$('#SECOND').html());*/
    });
    var first = localStorage.getItem('FIRST');
-   var second = localStorage.getItem('SECOND');
+   /*var second = localStorage.getItem('SECOND');*/
    !first || $('#FIRST').html(first);
-   !second || $('#SECOND').html(second);
-
+   /*!second || $('#SECOND').html(second);*/
 
 });
 
@@ -1282,5 +1281,17 @@ var Table = (function(){
 
   return table;
 })();
+
+
+
+
+var matches = document.querySelectorAll('.hide-0');
+
+matches.forEach(function(elem) {
+  elem.parentNode.removeChild(elem);
+});
+
+
+elem.parentNode.removeChild(elem);
 
 
