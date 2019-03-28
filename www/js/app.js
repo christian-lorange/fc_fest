@@ -1292,6 +1292,3 @@ matches.forEach(function(elem) {
 });
 
 
-elem.parentNode.removeChild(elem);
-
-
