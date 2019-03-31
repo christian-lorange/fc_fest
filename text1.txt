@@ -60,6 +60,8 @@ function CallButton()
 </script>
 
 
+<!-- Load random image -->
+
 
 
 
@@ -75,11 +77,12 @@ function CallButton()
 <div class="topnav" id="myTopnav">
   <a href="#" onclick="nav_function()" style="pointer-events: none;display: block;"><img src="img/pick.png" alt="FoCoMX logo" id="nav_image">    FoCoMX 2019</a>
   <a href="#schedule" onclick="nav_function();schedule()" class="topnav_link">Shows</a>
-  <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link" style="display: none" id="myshowsnav">My Show List</a>
+  <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link" style="display: none" id="myshowsnav">My Shows</a>
   <a href="#foco" onclick="nav_function();foco()" class="topnav_link">About</a>
   <a href="#map" onclick="nav_function();loadmap();map_int()" class="topnav_link">Map</a>
   <a href="#sponsors" onclick="nav_function();sponsors()" class="topnav_link">Sponsors</a>
   <a href="social.html" onclick="nav_function();social()" class="topnav_link">Social</a>
+  <a href="#usage" onclick="nav_function();usage()" class="topnav_link">App How To</a>
   <a href="javascript:void(0);" class="icon" onclick="nav_function()">
     <i class="fa fa-bars"></i>
   </a>
@@ -93,7 +96,7 @@ function CallButton()
 <h3>FoCoMX 2019</h3>
 <p>The Fort Collins Musicians Association (FoCoMA) is proud to present the 11th Annual Fort Collins Music eXperiment (FoCoMX) on April 26 & 27, 2019.</p>
 <p>We are so lucky to have such a vibrant scene that is supported by music lovers and our community at large. Thank you to everyone for making such an event possible! FoCoMX, presented by the nonprofit Fort Collins Musicians Association (FoCoMA) is 2-day festival with well over 200 artists. Afternoon and evening performances offer a wealth of family-friendly programming. Later-evening performances feature rock, singer-songwriter, bluegrass, funk, reggae and more.</p>
-<p>FoCoMX started in 2009 as a grassroots experiment in promoting local music. The festival has grown over the years and we now see attendance of approximately 5500  and has garnering national attention and earning FoCoMX the unofficial title of &quot;The Biggest Little Festivalin America.&quot;  </p>
+<p>FoCoMX started in 2009 as a grassroots experiment in promoting local music. The festival has grown over the years and we now see attendance of approximately 5500  and has garnering national attention and earning FoCoMX the unofficial title of &quot;The Biggest Little Festival in America.&quot;  </p>
 
 <a href="http://bit.ly/FoCoMX11_BlindFaith" target="_blank" class="external_btn">Buy Tickets!</a> 
 <a href="https://focomx.focoma.org/volunteer" target="_blank" class="external_btn">Volunteer</a> 
@@ -320,11 +323,39 @@ function CallButton()
 </div>
 
 
+<div class="navLinks" id="usage">
+<section  class="wide">
+<h2 style="text-align: center;">Navigation</h2>
+<p>The navigation menu (which is accessed by clicking the three horizontal bars in upper right corner of the page) will be your primary method of navigating the app.</p>
+<h2 style="text-align: center;">Shows</h2>
+<p>The "Shows" page lists all of the performance that will be going on during the FoCoMX weekend. We will be doing our best to keep this up to date if any changes occur.</p>
+<p>There are a LOT of show this year. You can filter the show list by date, start time, and keywords. You can remove filters and see the full list again at any time by clicking the &#9940; symbol.</p>
+<p>To help keep track of what shows you want to see you can create your own schedule. Create a custom schedule by clicking the star symbol (&#x2605;) next to shows you want to see. Those performances will be added to the "My Shows" list. To remove a show from the list click the "X" symbol. The first page which will load when opening the app will be "My Shows" after you've added at least one show to your custom schedule. You can always go back to the full schedule by clicking "Shows" in the navigation menu.</p>
+<h2 style="text-align: center;">Artist and Venue Details</h2>
+<p>You can learn more about specific shows and venues by clicking the yellow oval buttons in the either the full show list or your custom schedule. If informaton is available, a pop-up box will open with brief band biographies, links to sample music, and artist website/Facebook pages. Not all artists pages may include samples songs or website/Facebook links.</p>
+<h2 style="text-align: center;">About Page</h2>
+<p>The "About" page includes details on the FoCoMX festival, the Fort Collins Music Association in general, as well a links to ticket purchases, volunteer opportunities, and frequently asked questions.</p>
+<h2 style="text-align: center;">Map Page</h2>
+<p>We've included an interactive map of where to find different venues around town. By choosing a venue from the dropdown menu at the top of the map, you can see where each of this years music venues are located in town.</p>
+<h2 style="text-align: center;">Sponsors Page</h2>
+<p>The FoCoMX festival would not be possible without the generous support of our many sponsors. We highly encourage you to take a look at our sponsors page and to thank them for making this all possible.</p>
+<h2 style="text-align: center;">Social Page</h2>
+<p>The "Social" page includes a feed of the latests tweets from the FoCoMX team. We encourage you to join the conversation but posting images, videos, and stories with the hashtag #focomx2019.</p>
+</div>
+
+
+</section>
+</div>
+
+
 <div class="navLinks" id="schedule">
 <section id="schedule" class="wide">
 
 <div id="no_shows">
-  <p>Create a custom schedule by clicking the heart symbols next to shows you want to see. Those performances will show up in your shows list.</p>
+  <h3 style="text-align: center;">Welcome to the 2019 FoCoMX App</h3>  
+  <p>We suggest you start by heading to the "App How To" link in the navigation menu above. Open the navigation menu by clicking the three horizontal bars ( &#9776; ) in the upper right corner.</p>
+  <p>The "How To" page outlines the major features and functions of this app and is designed to help you get the most our of your 2019 FoCoMX experience.</p>
+
 </div>
 
 <h1 class="headers">Schedule</h1>
@@ -338,7 +369,8 @@ function CallButton()
                         <tr>
                           <th style="display:none;">ID</th>
                             <th class="table-filterable" id="SECOND_select">Day &#160;</th>
-                            <th class="table-filterable">Time &#160;</th>
+                            <th class="table-filterable">Start Time &#160;</th>
+                            <th style="display:none;">Full Time</th>
                             <th style="display:none;">Venue</th>
                             <th style="display:none;">Style</th>
                             <th style="display:none;">Band</th>

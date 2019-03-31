@@ -243,7 +243,7 @@ padding-top: 5px;
 
 
 font-weight: bold;
-font-size: 0.7em;
+font-size: 0.9em;
 
 }
 
@@ -256,7 +256,7 @@ padding-top: 5px;
 
 
 font-weight: bold;
-font-size: 0.7em;
+font-size: 0.9em;
 }
 
 td.middlerow {
@@ -464,7 +464,7 @@ a {
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
-  color: #eee;
+  color: #black;
   padding: 1px 0;
   margin: 0 10px;
   transition: all 0.15s ease-in-out;
@@ -498,9 +498,14 @@ a {
   padding-top: 50px;
 }
 
+#usage {
+
+  padding-top: 50px;
+}
+
 #mapid {
 width: 100vw;
-height: 100vh;
+height: 80vh;
 
 }
 
@@ -616,11 +621,15 @@ padding: 10px;}
 }
 
 .panel-group .panel {
-  background-color: #1b75bc;
+  background-color: white;
 }
 
 h4.panel-title {
   font-weight: bolder;
+}
+
+#home a:link {
+  color:black;
 }
 
 
@@ -712,3 +721,19 @@ div#no_shows {
 
 }
 
+footer.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+height:10vw;;
+  color: white;
+  text-align: center;
+
+   background-image: url('http://placehold.it/300&text=banner1');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;  
+
+
+}

@@ -243,7 +243,7 @@ padding-top: 5px;
 
 
 font-weight: bold;
-font-size: 0.7em;
+font-size: 0.9em;
 
 }
 
@@ -256,7 +256,7 @@ padding-top: 5px;
 
 
 font-weight: bold;
-font-size: 0.7em;
+font-size: 0.9em;
 }
 
 td.middlerow {
@@ -464,7 +464,7 @@ a {
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
-  color: #eee;
+  color: #black;
   padding: 1px 0;
   margin: 0 10px;
   transition: all 0.15s ease-in-out;
@@ -498,9 +498,14 @@ a {
   padding-top: 50px;
 }
 
+#usage {
+
+  padding-top: 50px;
+}
+
 #mapid {
 width: 100vw;
-height: 100vh;
+height: 80vh;
 
 }
 
@@ -616,11 +621,15 @@ padding: 10px;}
 }
 
 .panel-group .panel {
-  background-color: #1b75bc;
+  background-color: white;
 }
 
 h4.panel-title {
   font-weight: bolder;
+}
+
+#home a:link {
+  color:black;
 }
 
 
@@ -712,4 +721,19 @@ div#no_shows {
 
 }
 
-.show-2,.show-4,.show-6,.show-8,.show-10,.show-12,.show-14,.show-16,.show-18,.show-20,.show-22,.show-24,.show-26,.show-28,.show-30,.show-32,.show-34,.show-36,.show-38,.show-40,.show-42,.show-44,.show-46,.show-48,.show-50,.show-52,.show-54,.show-56,.show-58,.show-60,.show-62,.show-64,.show-66,.show-68,.show-70,.show-72,.show-74,.show-76,.show-78,.show-80,.show-82,.show-84,.show-86,.show-88,.show-90,.show-92,.show-94,.show-96,.show-98,.show-100,.show-102,.show-104,.show-106,.show-108,.show-110,.show-112,.show-114,.show-116,.show-118,.show-120,.show-122,.show-124,.show-126,.show-128,.show-130,.show-132,.show-134,.show-136,.show-138,.show-140,.show-142,.show-144,.show-146,.show-148,.show-150,.show-152,.show-154,.show-156,.show-158,.show-160,.show-162,.show-164,.show-166,.show-168,.show-170,.show-172,.show-174,.show-176,.show-178,.show-180,.show-182,.show-184,.show-186,.show-188,.show-190,.show-192,.show-194,.show-196,.show-198,.show-200,.show-202,.show-204,.show-206,.show-208,.show-210,.show-212,.show-214,.show-216,.show-218,.show-220,.show-222,.show-224,.show-226,.show-228,.show-230,.show-232,.show-234,.show-236,.show-238,.show-240,.show-242,.show-244,.show-246,.show-248,.show-250,.show-252,.show-254,.show-256,.show-258,.show-260,.show-262,.show-264,.show-266,.show-268,.show-270,.show-272,.show-274,.show-276,.show-278,.show-280,.show-282,.show-284,.show-286,.show-288,.show-290,.show-292,.show-294,.show-296,.show-298,.show-300,.show-302,.show-304,.show-306,.show-308,.show-310,.show-312,.show-314,.show-316,.show-318,.show-320,.show-322,.show-324,.show-326,.show-328,.show-330,.show-332,.show-334,.show-336,.show-338,.show-340,.show-342,.show-344,.show-346,.show-348,.show-350,.show-352,.show-354,.show-356,.show-358,.show-360,.show-362,.show-364,.show-366,.show-368,.show-370,.show-372,.show-374,.show-376,.show-378,.show-380,.show-382,.show-384,.show-386,.show-388,.show-390,.show-392,.show-394,.show-396,.show-398,.show-400,.show-402,.show-404,.show-406,.show-408,.show-410,.show-412,.show-414,.show-416,.show-418,.show-420,.show-422,.show-424,.show-426,.show-428,.show-430,.show-432,.show-434,.show-436,.show-438,.show-440,.show-442,.show-444,.show-446,.show-448,.show-450,.show-452,.show-454,.show-456,.show-458,.show-460,.show-462,.show-464,.show-466,.show-468,.show-470,.show-472,.show-474,.show-476,.show-478,.show-480,.show-482,.show-484,.show-486,.show-488,.show-490,.show-492,.show-494,.show-496,.show-498,.show-500,.show-502,.show-504,.show-506,.show-508,.show-510,.show-512,.show-514,.show-516,.show-518,.show-520,.show-522,.show-524,.show-526,.show-528,.show-530,.show-532,.show-534,.show-536,.show-538,.show-540,.show-542,.show-544,.show-546,.show-548,.show-550,.show-552,.show-554,.show-556,.show-558,.show-560,.show-562,.show-564,.show-566,.show-568,.show-570,.show-572,.show-574,.show-576,.show-578,.show-580,.show-582,.show-584,.show-586,.show-588,.show-590,.show-592,.show-594,.show-596,.show-598,.show-600,.show-602,.show-604,.show-606,.show-608,.show-610,.show-612,.show-614,.show-616,.show-618,.show-620,.show-622,.show-624,.show-626,.show-628,.show-630,.show-632,.show-634,.show-636,.show-638,.show-640,.show-642,.show-644,.show-646,.show-648,.show-650,.show-652,.show-654,.show-656,.show-658,.show-660,.show-662,.show-664,.show-666,.show-668,.show-670,.show-672,.show-674,.show-676,.show-678,.show-680,.show-682,.show-684,.show-686,.show-688,.show-690,.show-692,.show-694,.show-696,.show-698,.show-700,.show-702,.show-704,.show-706,.show-708,.show-710,.show-712,.show-714,.show-716,.show-718,.show-720,.show-722,.show-724,.show-726,.show-728,.show-730,.show-732,.show-734{display:none;}
+footer.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+height:10vw;;
+  color: white;
+  text-align: center;
+
+   background-image: url('http://placehold.it/300&text=banner1');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;  
+
+
+}.show-2,.show-4,.show-6,.show-8,.show-10,.show-12,.show-14,.show-16,.show-18,.show-20,.show-22,.show-24,.show-26,.show-28,.show-30,.show-32,.show-34,.show-36,.show-38,.show-40,.show-42,.show-44,.show-46,.show-48,.show-50,.show-52,.show-54,.show-56,.show-58,.show-60,.show-62,.show-64,.show-66,.show-68,.show-70,.show-72,.show-74,.show-76,.show-78,.show-80,.show-82,.show-84,.show-86,.show-88,.show-90,.show-92,.show-94,.show-96,.show-98,.show-100,.show-102,.show-104,.show-106,.show-108,.show-110,.show-112,.show-114,.show-116,.show-118,.show-120,.show-122,.show-124,.show-126,.show-128,.show-130,.show-132,.show-134,.show-136,.show-138,.show-140,.show-142,.show-144,.show-146,.show-148,.show-150,.show-152,.show-154,.show-156,.show-158,.show-160,.show-162,.show-164,.show-166,.show-168,.show-170,.show-172,.show-174,.show-176,.show-178,.show-180,.show-182,.show-184,.show-186,.show-188,.show-190,.show-192,.show-194,.show-196,.show-198,.show-200,.show-202,.show-204,.show-206,.show-208,.show-210,.show-212,.show-214,.show-216,.show-218,.show-220,.show-222,.show-224,.show-226,.show-228,.show-230,.show-232,.show-234,.show-236,.show-238,.show-240,.show-242,.show-244,.show-246,.show-248,.show-250,.show-252,.show-254,.show-256,.show-258,.show-260,.show-262,.show-264,.show-266,.show-268,.show-270,.show-272,.show-274,.show-276,.show-278,.show-280,.show-282,.show-284,.show-286,.show-288,.show-290,.show-292,.show-294,.show-296,.show-298,.show-300,.show-302,.show-304,.show-306,.show-308,.show-310,.show-312,.show-314,.show-316,.show-318,.show-320,.show-322,.show-324,.show-326,.show-328,.show-330,.show-332,.show-334,.show-336,.show-338,.show-340,.show-342,.show-344,.show-346,.show-348,.show-350,.show-352,.show-354,.show-356,.show-358,.show-360,.show-362,.show-364,.show-366,.show-368,.show-370,.show-372,.show-374,.show-376,.show-378,.show-380,.show-382,.show-384,.show-386,.show-388,.show-390,.show-392,.show-394,.show-396,.show-398,.show-400,.show-402,.show-404,.show-406,.show-408,.show-410,.show-412,.show-414,.show-416,.show-418,.show-420,.show-422,.show-424,.show-426,.show-428,.show-430,.show-432,.show-434,.show-436,.show-438,.show-440,.show-442,.show-444,.show-446,.show-448,.show-450,.show-452,.show-454,.show-456,.show-458,.show-460,.show-462,.show-464,.show-466,.show-468,.show-470,.show-472,.show-474,.show-476,.show-478,.show-480,.show-482,.show-484,.show-486,.show-488,.show-490,.show-492,.show-494,.show-496,.show-498,.show-500,.show-502,.show-504,.show-506,.show-508,.show-510,.show-512,.show-514,.show-516,.show-518,.show-520,.show-522,.show-524,.show-526,.show-528,.show-530,.show-532,.show-534,.show-536,.show-538,.show-540,.show-542,.show-544,.show-546,.show-548,.show-550,.show-552,.show-554,.show-556,.show-558,.show-560,.show-562,.show-564,.show-566,.show-568,.show-570,.show-572,.show-574,.show-576,.show-578,.show-580,.show-582,.show-584,.show-586,.show-588,.show-590,.show-592,.show-594,.show-596,.show-598,.show-600,.show-602,.show-604,.show-606,.show-608,.show-610,.show-612,.show-614,.show-616,.show-618,.show-620,.show-622,.show-624,.show-626,.show-628,.show-630,.show-632,.show-634,.show-636,.show-638,.show-640,.show-642,.show-644,.show-646,.show-648,.show-650,.show-652,.show-654,.show-656,.show-658,.show-660,.show-662,.show-664,.show-666,.show-668,.show-670,.show-672,.show-674,.show-676,.show-678,.show-680,.show-682,.show-684,.show-686,.show-688,.show-690,.show-692,.show-694,.show-696,.show-698,.show-700,.show-702,.show-704,.show-706,.show-708,.show-710,.show-712,.show-714,.show-716,.show-718,.show-720,.show-722,.show-724,.show-726,.show-728,.show-730,.show-732,.show-734{display:none;}

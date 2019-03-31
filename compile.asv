@@ -7,8 +7,8 @@ data=readtable('bands.xlsx');
 s1="<tr class=@content show-"
 s1b="@><td class=@sortnr@ style=@display:none;@>";                                     %ID
 s2="</td><td class=@tpl@>";                                                                             %Day
-s3="</td><td class=@tpr@ style=@display:none;@>";                                                       %Start Time
-s3b="</td><td class=@tpr@>";                                                                            %Full time
+s3="</td><td class=@tpr@>";                                                                             %Start Time
+s3b="</td><td class=@tpr@>";    
 s4="</td><td class=@tpr@>";                                                                             %Style
 s5=" </td><td class=@middlerow@><button onclick=@openModal();currentSlide(";                            %ID
 s6=")@>"                                                                                                %Artist
@@ -121,7 +121,7 @@ s1="<div class=@mySlides@><h2 class=@artist@>"; %Venue
 s2="</h2><h3 class=@artist@>";                   %Address
 s3="</h3><p class=@artist@><img src=@";          %logo
 s4="@ alt=@FocoBanner@ style=@width: 100%;@></p><p style=@font-size:1.8em;@>";
-s5="</p><p>Head over to the map page to get more details on where to find this venue.</p></div>";
+s5="</p></div>";
 
 venue=[];
 

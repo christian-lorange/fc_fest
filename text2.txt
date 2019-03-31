@@ -14,7 +14,8 @@
                         <tr>
                           <th style="display:none;">ID</th>
                             <th class="table-filterable" id="FIRST_select">Day   </th>
-                            <th class="table-filterable">Time</th>
+                            <th class="table-filterable">Start Time</th>
+                            <th style="display:none;">Full Time</th>
                             <th style="display:none;">Venue</th>
                             <th style="display:none;">Style</th>
                             <th style="display:none;">Band</th>

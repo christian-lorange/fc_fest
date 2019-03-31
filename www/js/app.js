@@ -72,6 +72,7 @@ function openModal() {
 
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
+
 }
 
 
@@ -135,6 +136,12 @@ function nav_function() {
   } else {
     x.className = "topnav";
   }
+
+  $('html,body').scrollTop(0);
+
+  closeModal()
+
+
 }
 
 
@@ -212,6 +219,11 @@ hide();
 document.getElementById('social').style.display = 'block';
 }
 
+function usage() {
+hide();
+document.getElementById('usage').style.display = 'block';
+}
+
 
 
 function hide () {
@@ -234,6 +246,8 @@ function checkstatus () {
   }
  
   clear ();
+
+
 
  
 }
@@ -1292,3 +1306,4 @@ matches.forEach(function(elem) {
 });
 
 
+randombg();

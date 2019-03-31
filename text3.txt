@@ -72,7 +72,7 @@
     <div class="row sponsor_row" >
 <h2>Silver Media Sponsor</h2>
 <div class="sponsor_col"><a href="http://www.radio949.com/" target="_blank"><img src="img/sponsors/Radio%2094.9_1.jpg" alt="FoCoMX logo" class="sponsor_img"></a></div>
-<div class="sponsor_col"><a href="https://www.kgnu.org/" target="_blank"><img src="img/sponsors/Logo-Color(DB).jpg" alt="FoCoMX logo" class="sponsor_img"></a></div>
+<div class="sponsor_col"><a href="https://www.kgnu.org/" target="_blank"><img src="img/sponsors/kgnu-logo-blue-RGB.jpg" alt="FoCoMX logo" class="sponsor_img"></a></div>
 
         
     </div>
@@ -146,6 +146,12 @@
 
 </section>
 </div>
+
+
+
+<footer class="footer" id="footer">
+
+</footer>
  
 
 <script type="text/javascript">
@@ -256,14 +262,39 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
 
 
 
-
+<script type="text/javascript">
+function randombg(){
+  var random= Math.floor(Math.random() * 20) + 0;
+  var bigSize = ["url('http://placehold.it/300&text=banner1')",
+                 "url('http://placehold.it/300&text=banner2')",
+                 "url('http://placehold.it/300&text=banner3')",
+                 "url('http://placehold.it/300&text=banner4')",
+                 "url('http://placehold.it/300&text=banner5')",
+                 "url('http://placehold.it/300&text=banner6')",
+                 "url('http://placehold.it/300&text=banner7')",
+                 "url('http://placehold.it/300&text=banner8')",
+                 "url('http://placehold.it/300&text=banner9')",
+                 "url('http://placehold.it/300&text=banner10')",
+                 "url('http://placehold.it/300&text=banner11')",
+                 "url('http://placehold.it/300&text=banner12')",
+                 "url('http://placehold.it/300&text=banner13')",
+                 "url('http://placehold.it/300&text=banner14')",
+                 "url('http://placehold.it/300&text=banner15')",
+                 "url('http://placehold.it/300&text=banner16')",
+                 "url('http://placehold.it/300&text=banner17')",
+                 "url('http://placehold.it/300&text=banner18')",
+                 "url('http://placehold.it/300&text=banner19')",
+                 "url('http://placehold.it/300&text=banner20')"];
+  document.getElementById("footer").style.backgroundImage=bigSize[random];
+}
+</script>
     
 <script src="js/mapresources.js"></script>
 
-<p style="text-align: center;margin: auto; width: 100vw; background: #242424; color: white; font-size: 0.7em;height: 30px;" onclick="window.open('http://onelink.to/zdbmb8')">FoCOMX 2019 - App Development Donated by OrangeHouse LLC. Check out our other mobile apps by clicking here.</p>
+<p style="text-align: center;margin: auto; width: 100vw; background: #242424; color: white; font-size: 0.7em;height: 30px; padding-bottom:20vw;" onclick="window.open('http://ornangehousellc.com')">FoCOMX 2019 - App Development Donated by OrangeHouse LLC. Check out our other mobile apps by clicking here.</p>
 <script type="text/javascript" src="cordova.js"></script>
 
-<script type="text/javascript" src="js/admob2.js"></script>
+<!--<script type="text/javascript" src="js/admob2.js"></script>-->
 <script type="text/javascript" src="phonegap.js"></script>
 
 <!--Script to change _blank hrefs to exteral  -->
@@ -273,6 +304,9 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
   window.open($(e.currentTarget).attr('href'), '_system', '');
 });
 </script>
+
+
+
 	
 <script src="js/app.js"></script> 
 <script src="js/table.js"></script>
