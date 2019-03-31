@@ -328,19 +328,19 @@ function CallButton()
 <h2 style="text-align: center;">Navigation</h2>
 <p>The navigation menu (which is accessed by clicking the three horizontal bars in upper right corner of the page) will be your primary method of navigating the app.</p>
 <h2 style="text-align: center;">Shows</h2>
-<p>The "Shows" page lists all of the performance that will be going on during the FoCoMX weekend. We will be doing our best to keep this up to date if any changes occur.</p>
+<p>The "Shows" page lists all of the performances that will be going on during the FoCoMX weekend. We will be doing our best to keep this up to date if any changes occur.</p>
 <p>There are a LOT of show this year. You can filter the show list by date, start time, and keywords. You can remove filters and see the full list again at any time by clicking the &#9940; symbol.</p>
 <p>To help keep track of what shows you want to see you can create your own schedule. Create a custom schedule by clicking the star symbol (&#x2605;) next to shows you want to see. Those performances will be added to the "My Shows" list. To remove a show from the list click the "X" symbol. The first page which will load when opening the app will be "My Shows" after you've added at least one show to your custom schedule. You can always go back to the full schedule by clicking "Shows" in the navigation menu.</p>
 <h2 style="text-align: center;">Artist and Venue Details</h2>
-<p>You can learn more about specific shows and venues by clicking the yellow oval buttons in the either the full show list or your custom schedule. If informaton is available, a pop-up box will open with brief band biographies, links to sample music, and artist website/Facebook pages. Not all artists pages may include samples songs or website/Facebook links.</p>
+<p>You can learn more about specific artists and venues by clicking the yellow oval buttons in either the full show list or your custom schedule. If informaton is available, a pop-up box will open with brief band biographies, links to sample music, and artist website/Facebook pages. Not all artists pages may include samples songs or website/Facebook links.</p>
 <h2 style="text-align: center;">About Page</h2>
-<p>The "About" page includes details on the FoCoMX festival, the Fort Collins Music Association in general, as well a links to ticket purchases, volunteer opportunities, and frequently asked questions.</p>
+<p>The "About" page includes details on the FoCoMX festival, the Fort Collins Music Association in general, as well as links to ticket purchases, volunteer opportunities, and frequently asked questions.</p>
 <h2 style="text-align: center;">Map Page</h2>
-<p>We've included an interactive map of where to find different venues around town. By choosing a venue from the dropdown menu at the top of the map, you can see where each of this years music venues are located in town.</p>
+<p>We've included an interactive map of where to find different venues around town. By choosing a venue from the dropdown menu at the top of the map, you can see where each of this years' music venues are located in town.</p>
 <h2 style="text-align: center;">Sponsors Page</h2>
-<p>The FoCoMX festival would not be possible without the generous support of our many sponsors. We highly encourage you to take a look at our sponsors page and to thank them for making this all possible.</p>
+<p>The FoCoMX festival would not be possible without the generous support of our many sponsors. We highly encourage you to take a look at our sponsors page and to thank them for making FoCoMX possible.</p>
 <h2 style="text-align: center;">Social Page</h2>
-<p>The "Social" page includes a feed of the latests tweets from the FoCoMX team. We encourage you to join the conversation but posting images, videos, and stories with the hashtag #focomx2019.</p>
+<p>The "Social" page includes a feed of the latest tweets from the FoCoMX team. We encourage you to join the conversation by posting images, videos, and stories with the hashtag #focomx2019.</p>
 </div>
 
 
