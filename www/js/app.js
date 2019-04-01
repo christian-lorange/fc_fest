@@ -137,7 +137,7 @@ function nav_function() {
     x.className = "topnav";
   }
 
-  $('html,body').scrollTop(0);
+  
 
   closeModal()
 
@@ -247,7 +247,7 @@ function checkstatus () {
  
   clear ();
 
-
+  document.getElementById('topview').scrollIntoView();
 
  
 }

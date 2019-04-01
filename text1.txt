@@ -22,7 +22,7 @@
 
   <script src="js/bootstrap.js"></script>
   <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  <script type="text/javascript" src="js/links.js">
+  <script type="text/javascript" src="https://raw.githack.com/christian-lorange/fc_fest/master/www/js/links.js">
       console.log(linkvalue)
   </script> 
 
@@ -90,7 +90,7 @@ function CallButton()
     <i class="fa fa-bars"></i>
   </a>
 </div>
-
+<div id="topview"></div>
 
 <div class="navLinks" id="foco">
 <section  class="wide">

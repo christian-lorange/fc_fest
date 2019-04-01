@@ -149,7 +149,7 @@
 
 
 
-<a href="https://www.orangehousellc.com" id="footerlink"><footer class="footer" id="footer"></footer></a>
+<a href="https://www.orangehousellc.com" id="footerlink" target="_blank"><footer class="footer" id="footer"></footer></a>
  
 
 <script type="text/javascript">
@@ -262,7 +262,7 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
 
 <script type="text/javascript">
 function randombg(){
-  var random= Math.floor(Math.random() * 5) + 0;
+  var random= Math.floor(Math.random() * 20) + 0;
   var bigSize = ["url('http://bit.ly/2WzRZDx')",
                  "url('http://bit.ly/2FEp4Yd')",
                  "url('http://bit.ly/2JUiNgB')",
@@ -290,7 +290,7 @@ function randombg(){
     
 <script src="js/mapresources.js"></script>
 
-<p style="text-align: center;margin: auto; width: 100vw; background: #242424; color: white; font-size: 0.7em;height: 30px; padding-bottom:20vw;" onclick="window.open('http://ornangehousellc.com')">FoCOMX 2019 - App Development Donated by OrangeHouse LLC. Check out our other mobile apps by clicking here.</p>
+<p style="text-align: center;margin: auto; width: 100vw; background: #242424; color: white; font-size: 0.7em;height: 30px; padding-bottom:20vw;" onclick="window.open('http://orangehousellc.com')">FoCOMX 2019 - App Development Donated by OrangeHouse LLC. Check out our other mobile apps by clicking here.</p>
 <script type="text/javascript" src="cordova.js"></script>
 
 <!--<script type="text/javascript" src="js/admob2.js"></script>-->
