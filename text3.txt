@@ -264,12 +264,12 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
 
 <script type="text/javascript">
 function randombg(){
-  var random= Math.floor(Math.random() * 20) + 0;
-  var bigSize = ["url('http://placehold.it/300&text=banner1')",
-                 "url('http://placehold.it/300&text=banner2')",
-                 "url('http://placehold.it/300&text=banner3')",
-                 "url('http://placehold.it/300&text=banner4')",
-                 "url('http://placehold.it/300&text=banner5')",
+  var random= Math.floor(Math.random() * 5) + 0;
+  var bigSize = ["url('http://bit.ly/2WzRZDx')",
+                 "url('http://bit.ly/2FEp4Yd')",
+                 "url('http://bit.ly/2JUiNgB')",
+                 "url('http://bit.ly/2FMFxuG')",
+                 "url('http://bit.ly/2U5k9ts')",
                  "url('http://placehold.it/300&text=banner6')",
                  "url('http://placehold.it/300&text=banner7')",
                  "url('http://placehold.it/300&text=banner8')",
