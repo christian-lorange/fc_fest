@@ -17,7 +17,7 @@ document.addEventListener('deviceready', function() {
   admob.banner.config({
     id: admobid.banner,
     isTesting: false,
-    autoShow: true,
+    autoShow: false,
   })
   admob.banner.prepare()
 
