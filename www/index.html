@@ -2232,7 +2232,8 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
 
 <script type="text/javascript">
     function randombg(){
-  var random= Math.floor(Math.random() * 20) + 0;
+         setTimeout(
+    function() { var random= Math.floor(Math.random() * 20) + 0;
   var bigSize = ["url('http://bit.ly/2WzRZDx')",
                  "url('http://bit.ly/2FEp4Yd')",
                  "url('http://bit.ly/2JUiNgB')",
@@ -2258,6 +2259,8 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
   document.getElementById('footer').style.backgroundImage=bigSize[random];
   document.getElementById('footerlink').href=linkvalue[random]; 
 
+    }, 2000);
+ 
 
 
 }
