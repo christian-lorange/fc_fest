@@ -150,7 +150,7 @@
 
 
 
-<a href="https://www.orangehousellc.com" id="footerlink" target="_blank"><footer class="footer" id="footer"></footer></a>
+<a href="https://orangehousellc.com" id="footerlink" target="_blank"><footer class="footer" id="footer"></footer></a>
  
 
 <script type="text/javascript">
