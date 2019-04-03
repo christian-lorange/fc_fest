@@ -89,7 +89,7 @@ function CallButton()
 <div class="navLinks" id="social" style="display: block;">
 <section  class="wide">
 <div class="twitter_respond" ><img src="img/twitter-bird-white.png" alt="web logo" style="height: 30px">
-<a href="https://twitter.com/intent/tweet?hashtags=focomx19%2C&ref_src=twsrc%5Etfw&tw_p=tweetbutton">Tweet #FoCoMX2019</a>
+<a href="https://twitter.com/intent/tweet?hashtags=focomx19%2C&ref_src=twsrc%5Etfw&tw_p=tweetbutton" target="_blank">Tweet #FoCoMX2019</a>
 
 </div>    
 <div class="twitter_div">
@@ -100,6 +100,13 @@ function CallButton()
 </section>
 </div>
 
+<!--Script to change _blank hrefs to exteral  -->
+<script type="text/javascript">
+    $("a[target='_blank']").click(function(e){
+  e.preventDefault();
+  window.open($(e.currentTarget).attr('href'), '_system', '');
+});
+</script>
 
 
 </body>
