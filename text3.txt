@@ -286,6 +286,8 @@ function randombg(){
                  "url('http://bit.ly/2TK5HC1')"];
   document.getElementById("footer").style.backgroundImage=bigSize[random];
   document.getElementById("footerlink").href=linkvalue[random]; 
+
+    document.querySelector('.results').innerHTML = random;
 }
 </script>
     
