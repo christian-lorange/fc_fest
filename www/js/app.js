@@ -224,6 +224,12 @@ hide();
 document.getElementById('usage').style.display = 'block';
 }
 
+function donate() {
+hide();
+document.getElementById('donate').style.display = 'block';
+}
+
+
 
 
 function hide () {
@@ -1306,3 +1312,7 @@ matches.forEach(function(elem) {
 });
 
 
+
+
+
+$("#footer").load( "https://rawgit.com/christian-lorange/happyhour/master/hh.html" );

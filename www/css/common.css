@@ -721,7 +721,7 @@ div#no_shows {
 
 }
 
-footer.footer {
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
