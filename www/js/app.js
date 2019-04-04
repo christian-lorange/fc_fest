@@ -85,8 +85,8 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {slideIndex = 1};
+  if (n < 1) {slideIndex = slides.length};
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
@@ -139,7 +139,7 @@ function nav_function() {
 
   
 
-  closeModal()
+  closeModal();
 
 
 }
@@ -241,14 +241,13 @@ function hide () {
 
 function checkstatus () {
   var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
-  console.log(rows)
+
   if (rows >= 2) {
     my_favs2();
   } else {
     document.getElementById('no_shows').style.display = 'block';
     document.getElementById('schedule').style.display = 'block';
-    document.getElementById('favorites.navLinks').style.display = 'none';
-    document.getElementById('schedule.navLinks').style.display = 'block';
+
   }
  
   clear ();
@@ -417,14 +416,14 @@ var Table = (function(){
   /**
    * Determine if a reference is defined
    */
-  function def(o) {return (typeof o!="undefined");};
+  function def(o) {return (typeof o!="undefined");}
 
   /**
    * Determine if an object or class string contains a given class.
    */
   function hasClass(o,name) {
     return new RegExp("(^|\\s)"+name+"(\\s|$)").test(o.className);
-  };
+  }
 
   /**
    * Add a class to an object
@@ -434,7 +433,7 @@ var Table = (function(){
     if (def(c) && !hasClass(o,name)) {
       o.className += (c?" ":"") + name;
     }
-  };
+  }
 
   /**
    * Remove a class from an object
@@ -442,7 +441,7 @@ var Table = (function(){
   function removeClass(o,name) {
     var c = o.className || "";
     o.className = c.replace(new RegExp("(^|\\s)"+name+"(\\s|$)"),"$1");
-  };
+  }
 
   /**
    * For classes that match a given substring, return the rest
@@ -453,7 +452,7 @@ var Table = (function(){
       return RegExp.$2;
     }
     return null;
-  };
+  }
 
   /**
    * Return true if an object is hidden.
