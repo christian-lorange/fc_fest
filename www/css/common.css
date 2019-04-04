@@ -353,7 +353,7 @@ td.bottomrow button {
 }
 
 #myInput {
-  width:80.5vw;
+  width:70.5vw;
   margin-left: 2vw;
   height: 50px;
   font-weight: bolder;
@@ -730,7 +730,7 @@ height:10vw;;
   color: white;
   text-align: center;
 
-   background-image: url('http://bit.ly/2WzRZDx');
+
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;  
