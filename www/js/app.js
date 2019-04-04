@@ -1315,4 +1315,4 @@ matches.forEach(function(elem) {
 
 
 
-$("#footer").load( "https://rawgit.com/christian-lorange/happyhour/master/hh.html" );
+$("#footer").load( "https://raw.githack.com/christian-lorange/fc_fest/master/www/ad1.html" );
