@@ -150,7 +150,7 @@
 
 
 
-<a href="https://orangehousellc.com" id="footerlink" target="_blank"><footer class="footer" id="footer"></footer></a>
+<footer class="footer" id="footer"><iframe src="https://orangehousellc.com/OrangeHouse/FoCoMX/ads.html" height="100%" width="100%"></iframe></footer>
  
 
 <script type="text/javascript">
@@ -261,35 +261,6 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
 
 
 
-<script type="text/javascript">
-function randombg(){
-  var random= Math.floor(Math.random() * 20) + 0;
-  var bigSize = ["url('http://bit.ly/2WzRZDx')",
-                 "url('http://bit.ly/2FEp4Yd')",
-                 "url('http://bit.ly/2JUiNgB')",
-                 "url('http://bit.ly/2FMFxuG')",
-                 "url('http://bit.ly/2U5k9ts')",
-                 "url('http://bit.ly/2Ub41qo')",
-                 "url('http://bit.ly/2uCHwez')",
-                 "url('http://bit.ly/2FKyy45')",
-                 "url('http://bit.ly/2FO5lFs')",
-                 "url('http://bit.ly/2uEC9vK')",
-                 "url('http://bit.ly/2Vb8nKo')",
-                 "url('http://bit.ly/2TNMrDL')",
-                 "url('http://bit.ly/2Uln2FY')",
-                 "url('http://bit.ly/2WDva1L')",
-                 "url('http://bit.ly/2I0yTma')",
-                 "url('http://bit.ly/2WFY0Po')",
-                 "url('http://bit.ly/2HQQaio')",
-                 "url('http://bit.ly/2YHnHk5')",
-                 "url('http://bit.ly/2YK6k2r')",
-                 "url('http://bit.ly/2TK5HC1')"];
-  document.getElementById("footer").style.backgroundImage=bigSize[random];
-  document.getElementById("footerlink").href=linkvalue[random]; 
-
-    document.querySelector('.results').innerHTML = random;
-}
-</script>
     
 <script src="js/mapresources.js"></script>
 
