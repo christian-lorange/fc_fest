@@ -87,6 +87,7 @@ function CallButton()
   <a href="#map" onclick="nav_function();loadmap();map_int()" class="topnav_link">Map</a>
   <a href="#sponsors" onclick="nav_function();sponsors()" class="topnav_link">Sponsors</a>
   <a href="social.html" onclick="nav_function();social()" class="topnav_link">Social</a>
+  <a href="#donate" onclick="nav_function();donate()" class="topnav_link">Make a Donation</a>
   <a href="#usage" onclick="nav_function();usage()" class="topnav_link">App How To</a>
   <a href="javascript:void(0);" class="icon" onclick="nav_function()">
     <i class="fa fa-bars"></i>
@@ -324,6 +325,15 @@ function CallButton()
 </div>
 
 
+</section>
+</div>
+
+<div class="navLinks" id="donate">
+<section  class="wide">
+<h2>Make a Donation</h2>
+<p>We need your support to help us better serve the Fort Collins Community.</p>
+<p>Your donations can help the Fort Collins Musicians Association continue to support local music and put in events like FoCoMX.</p>
+<a href="https://www.focoma.org/donate" target="_blank" class="external_btn">Donate Today!</a> 
 </section>
 </div>
 
