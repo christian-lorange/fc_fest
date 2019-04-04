@@ -1312,7 +1312,31 @@ matches.forEach(function(elem) {
 });
 
 
+adsite = new Array();
+    adsite[0] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad1.html';
+    adsite[1] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad2html';
+    adsite[2] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad3.html';
+    adsite[3] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad4.html';
+    adsite[4] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad5.html';
+    adsite[5] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad6.html';
+    adsite[6] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad7.html';
+    adsite[7] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad8.html';
+    adsite[8] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad9.html';
+    adsite[9] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad10.html';
+    adsite[10] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad11.html';
+    adsite[11] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad12.html';
+    adsite[12] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad13.html';
+    adsite[13] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad14.html';
+    adsite[14] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad15.html';
+    adsite[15] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad16.html';
+    adsite[16] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad17.html';
+    adsite[17] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad18.html';
+    adsite[18] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad19.html';
+    adsite[19] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad20.html';
 
+  var num = Math.floor( Math.random() * 20);
+  var adselected = adsite[num];
 
-
-$("#footer").load( "https://raw.githack.com/christian-lorange/fc_fest/master/www/ad1.html" );
+  setTimeout(function(){
+$("#footer").load( adselected );
+  },500);
