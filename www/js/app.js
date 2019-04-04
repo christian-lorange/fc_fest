@@ -1314,7 +1314,7 @@ matches.forEach(function(elem) {
 
 adsite = new Array();
     adsite[0] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad1.html';
-    adsite[1] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad2html';
+    adsite[1] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad2.html';
     adsite[2] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad3.html';
     adsite[3] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad4.html';
     adsite[4] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad5.html';
