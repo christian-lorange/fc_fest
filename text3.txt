@@ -150,7 +150,7 @@
 
 
 
-<footer class="footer" id="footer"><iframe src="https://orangehousellc.com/OrangeHouse/FoCoMX/ads.html" height="100%" width="100%" sandbox="allow-popups-to-escape-sandbox"></iframe></footer>
+<div class="footer" id="footer"></div>
  
 
 <script type="text/javascript">
@@ -264,7 +264,6 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
     
 <script src="js/mapresources.js"></script>
 
-<p style="text-align: center;margin: auto; width: 100vw; background: #242424; color: white; font-size: 0.7em;height: 30px; padding-bottom:20vw;" onclick="window.open('http://orangehousellc.com')">FoCOMX 2019 - App Development Donated by OrangeHouse LLC. Check out our other mobile apps by clicking here.</p>
 <script type="text/javascript" src="cordova.js"></script>
 
 <!--<script type="text/javascript" src="js/admob2.js"></script>-->
@@ -283,6 +282,45 @@ document.querySelector('#clearbutton2').addEventListener('click', filterTable2, 
 	
 <script src="js/app.js"></script> 
 <script src="js/table.js"></script>
+
+<script type="text/javascript">
+adsite = new Array();
+    adsite[0] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad1.html';
+    adsite[1] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad2.html';
+    adsite[2] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad3.html';
+    adsite[3] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad4.html';
+    adsite[4] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad5.html';
+    adsite[5] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad6.html';
+    adsite[6] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad7.html';
+    adsite[7] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad8.html';
+    adsite[8] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad9.html';
+    adsite[9] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad10.html';
+    adsite[10] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad11.html';
+    adsite[11] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad12.html';
+    adsite[12] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad13.html';
+    adsite[13] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad14.html';
+    adsite[14] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad15.html';
+    adsite[15] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad16.html';
+    adsite[16] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad17.html';
+    adsite[17] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad18.html';
+    adsite[18] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad19.html';
+    adsite[19] = 'https://raw.githack.com/christian-lorange/fc_fest/master/www/ad20.html';
+
+  var num = Math.floor( Math.random() * 20);
+  var adselected = adsite[num];
+
+  setTimeout(function(){
+$("#footer").load( adselected );
+console.log("success")
+update();
+  },300);
+
+</script>
+
+<script type="text/javascript">
+function update(){ $("#footer").trigger('create');
+console.log("success 2")}
+</script>
 
 </body>
 </html>
