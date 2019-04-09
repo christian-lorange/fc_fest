@@ -366,6 +366,7 @@ function CallButton()
   <h3 style="text-align: center;">Welcome to the 2019 FoCoMX App</h3>  
   <p>We suggest you start by heading to the "App How To" link in the navigation menu above. Open the navigation menu by clicking the three horizontal bars ( &#9776; ) in the upper right corner.</p>
   <p>The "How To" page outlines the major features and functions of this app and is designed to help you get the most our of your 2019 FoCoMX experience.</p>
+  <button onclick="removenote()" style="text-align: center;">Dismiss this note</button>
 
 </div>
 

@@ -67,6 +67,14 @@ function sortTable(){
 
 function openModal() {
   document.getElementById('myModal').style.display = "block";
+
+  var imgEl = document.getElementsByTagName('img');
+for (var i=0; i<imgEl.length; i++) {
+    if(imgEl[i].getAttribute('data-src')) {
+       imgEl[i].setAttribute('src',imgEl[i].getAttribute('data-src'));
+       imgEl[i].removeAttribute('data-src'); //use only if you need to remove data-src attribute after setting src
+    }
+}
  
 }
 
@@ -245,7 +253,13 @@ function checkstatus () {
   if (rows >= 2) {
     my_favs2();
   } else {
-    document.getElementById('no_shows').style.display = 'block';
+
+    if (localStorage.getItem("dismiss") == 1) {
+      document.getElementById('no_shows').style.display = 'none';
+    }
+    else{
+    document.getElementById('no_shows').style.display = 'block';}
+
     document.getElementById('schedule').style.display = 'block';
 
   }
@@ -1339,3 +1353,7 @@ adsite = new Array();
   setTimeout(function(){
 $("#footer").load( adselected );
   },500);
+
+function removenote() {
+localStorage.setItem("dismiss", 1);
+window.location.reload();}
