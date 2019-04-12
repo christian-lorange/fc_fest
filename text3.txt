@@ -329,5 +329,33 @@ function update(){ $("#footer").trigger('create');
 console.log("success 2")}
 </script>
 
+
+<script type="text/javascript">
+setTimeout(function()
+  {
+    var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
+
+  if (rows >= 2) {
+    my_favs2();
+  } else {
+
+    if (localStorage.getItem("dismiss") == 1) {
+      document.getElementById('no_shows').style.display = 'none';
+    }
+    else{
+    document.getElementById('no_shows').style.display = 'block';}
+
+    document.getElementById('schedule').style.display = 'block';
+
+  }
+ 
+  clear ();
+
+  document.getElementById('topview').scrollIntoView();}
+
+    , 500);
+
+</script>
+
 </body>
 </html>
