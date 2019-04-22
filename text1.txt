@@ -372,6 +372,21 @@ function CallButton()
 
 <h1 class="headers">Schedule</h1>
 
+<div id="myModal_save" class="modal_save" style="padding-top: 10vh;">
+
+  <!-- Modal content -->
+  <div class="modal-content_save">
+
+    <p>This show has been saved to your personal list</p>
+
+    <button onclick="modal_save_shows()" style="width:100%;margin-top: 10vw; height: 10vh;">Go to My Shows</button>
+
+    <br>
+    <button onclick="modal_save_close()" style="width:100%;margin-top: 10vw; height: 10vh;">Stay Here</button>
+  </div>
+
+</div>
+
 
 <input id="myInput" type="text" value="" placeholder="Type to Filter"/><button id="clearbutton" onclick="document.getElementById('myInput').value = ''">&#9940;</button>
 

@@ -166,8 +166,33 @@ document.getElementById('schedule').style.display = 'block';
 document.getElementById('myInput').value = '';
 }
 
-function my_favs() {
+function my_favs_star() {
 
+
+modal_save.style.display = "block";
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal_save) {
+    modal_save.style.display = "none";
+  }
+}
+
+/*window.location.reload()
+var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
+
+
+ if (rows >= 2) {
+    my_favs2();
+  }*/
+  
+}
+
+
+function my_favs() {
+  modal_save_close();  
 window.location.reload()
 var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
 
@@ -175,8 +200,26 @@ var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
  if (rows >= 2) {
     my_favs2();
   }
-  
+
 }
+
+
+function modal_save_close() {
+  modal_save.style.display = "none";
+}
+
+
+function modal_save_shows() {
+modal_save_close();  
+window.location.reload()
+var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
+
+
+ if (rows >= 2) {
+    my_favs2();
+  }
+}
+
 
 function my_favs2() {
 hide();
@@ -1357,3 +1400,32 @@ $("#footer").load( adselected );
 function removenote() {
 localStorage.setItem("dismiss", 1);
 window.location.reload();}
+
+
+
+
+// Get the modal
+var modal_save = document.getElementById('myModal_save');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal_save.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal_save.style.display = "none";
+  }
+}
