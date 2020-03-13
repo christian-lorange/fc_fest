@@ -46,7 +46,7 @@
     <preference name="SplashMaintainAspectRatio" value="true" />
 
     <!--    Define a specific version of PhoneGap to build into your app. -->
-     <preference name="phonegap-version"       value="cli-9.0.0" />
+     <preference name="phonegap-version"       value="cli-8.0.0" />
 
     <!-- Define app icon for each platform. -->
     
