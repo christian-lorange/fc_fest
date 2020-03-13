@@ -1,5 +1,0 @@
-Hid favorites list
-Hid festival schedule
-Hid favorites schedule
-Changed schedule to welcome <h1>
-Changed schedule to welcome (nav)
