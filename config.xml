@@ -3,7 +3,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.orangehouse-focomx.app"
-        version   = "1.0.35">
+        version   = "1.0.36">
 
     <name>FoCoMX 2020</name>
 
@@ -19,7 +19,7 @@
   <engine name="android" />
     <engine name="ios" />
     <plugin name="cordova-plugin-whitelist" />
-    <plugin name="cordova-plugin-admob-free"  spec="0.19.0"/>
+<!--     <plugin name="cordova-plugin-admob-free"  spec="0.19.0"/> -->
 
     
     <!--
@@ -99,7 +99,7 @@
 
 
     <!-- Push Notification -->
-    <gap:plugin name="onesignal-cordova-plugin" spec="2.4.5" source="npm" />
+    <gap:plugin name="onesignal-cordova-plugin" />
 
 <platform name="ios">
 <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024"/>
