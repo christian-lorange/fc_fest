@@ -1,0 +1,403 @@
+ <!Doctype html>
+<html>
+<head>
+  <title>FoCoMX Control Tool</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css" />
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+<script src="js/moment.js"></script>
+
+<script src="firebase-app.js"></script>
+<script src="firebase-auth.js"></script>
+<script src="firebase-database.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCujtPsrVXUeKbiLY18TKFosLQlmIsb2D8",
+    authDomain: "focomx-efa24.firebaseapp.com",
+    databaseURL: "https://focomx-efa24.firebaseio.com",
+    projectId: "focomx-efa24",
+    storageBucket: "focomx-efa24.appspot.com",
+    messagingSenderId: "807036067579",
+    appId: "1:807036067579:web:f52b1ec355e0e4e7b35a5e"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+
+  //Keep users logged in unless they explicitly logout
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  .then(function() {
+    // Existing and future Auth states are now persisted in the current
+    // session only. Closing the window would clear any existing state even
+    // if a user forgets to sign out.
+    // ...
+    // New sign-in will be persisted with session persistence.
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  })
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
+
+
+  //Check if user is logged in
+
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+      
+
+
+  } else {
+    
+   
+  }
+});
+
+
+
+  
+
+</script>
+
+<style type="text/css">
+
+  body {
+    text-align: center !important;
+  }
+
+  label, select, input {
+    display: block !important;
+  }
+
+  input, select, textarea {
+    text-align: center !important;
+    width: 75% !important;
+    background-color: #1C99D3 !important;
+    color: white !important;
+    margin: auto;
+    font-size: 1.3em;
+    height: auto;
+}
+
+
+::placeholder {
+  color: white;
+}
+
+.panel-default>.panel-heading {
+background-color: #173963 !important;
+color: white;
+font-weight: bolder;
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+<div class="main">
+
+  <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading1">
+      <h3 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1" aria-expanded="true" aria-controls="collapse1" class="collapsed">
+          <span>Add a New Show</span> <i class="glyphicon glyphicon-plus"></i>
+        </a>
+      </h3>
+    </div>
+    <div id="collapse1" class="panel-collapse in" role="tabpanel" aria-labelledby="heading1">
+      <div class="panel-body">
+        <!-- Start of partner input -->
+<h2>Show Information</h2>
+<label>Artist or Show Name</label><input id="artist" placeholder="Artist/Band Name" class="artistinput" required></input>
+<label>What Day is the Show?</label>
+<select id="day">
+  <option value="Fri">Friday</option>
+  <option value="Sat">Saturday</option>
+</select>
+<label>Show Start Time<input type="time" id="starttime" min="00:00" max="24:00" required></input></label>
+<label>Show End Time<input type="time" id="endtime" min="00:00" max="24:00" required></input></label>
+
+
+<label>Description of Show</label><textarea id="description" rows="4" cols="50" placeholder="Show Description"></textarea>
+
+
+
+<label>Show Location</label>
+<select id="venue">
+  <option value="Aggie Theater" vid="agg">Aggie Theater</option>
+  <option value="The Armory" vid="arm">The Armory</option>
+  <option value="Avo\'s" vid="avo">Avo's</option>
+  <option value="The Colorado Room" vid="cor">The Colorado Room</option>
+  <option value="Downtown Arterty" vid="art">Downtown Arterty</option>
+  <option value="Downtown Artery (Main Gallery)" vid="artg">Downtown Artery (Main Gallery)</option>
+  <option value="Downtown Artery (Narnia)" vid="artn">Downtown Artery (Narnia)</option>
+  <option value="The East Coast" vid="est">The East Coast</option>
+  <option value="Elliot\'s Martini Bar" vid="ell">Elliot's Martini Bar</option>
+  <option value="Equinox Brewing" vid="equ">Equinox Brewing</option>
+  <option value="Everyday Joe\'s Coffee House">Everyday Joe's Coffee House</option>
+  <option value="Fort Collins Museum of Discovery - Dome">Fort Collins Museum of Discovery - Dome</option>
+  <option value="Fort Collins Museum of Discovery - Garage">Fort Collins Museum of Discovery - Garage</option>
+  <option value="High Point Bar">High Point Bar</option>
+  <option value="Hodi\'s Half Note">Hodi's Half Note</option>
+  <option value="Illegal Pete\'s">Illegal Pete's</option>
+  <option value="The Lyric">The Lyric</option>
+  <option value="Magic Rat">Magic Rat</option>
+  <option value="Moe\'s Original Bar B Que">Moe's Original Bar B Que</option>
+  <option value="New Belgium Brewing - Outside">New Belgium Brewing - Outside</option>
+  <option value="New Belgium Brewing - Tasting Room">New Belgium Brewing - Tasting Room</option>
+  <option value="Odell Brewing Co">Odell Brewing Co</option>
+  <option value="Prost Brewing Company">Prost Brewing Company</option>
+  <option value="R Bar and Lounge">R Bar and Lounge</option>
+  <option value="The Rec Room">The Rec Room</option>
+  <option value="The Rickshaw Live">The Rickshaw Live</option>
+  <option value="The Rio Grande - Agave Room">The Rio Grande - Agave Room</option>
+  <option value="Scrumpy\'s">Scrumpy's</option>
+  <option value="Sound Off Silent Disco at Old Town Square">Sound Off Silent Disco at Old Town Square</option>
+  <option value="Surfside 7">Surfside 7</option>
+  <option value="Tap N Handle">Tap N Handle</option>
+  <option value="Tony\'s Rooftop">Tony's Rooftop</option>
+  <option value="Washington\'s FoCo">Washington's FoCo</option>
+  <option value="The Whisk(e)y">The Whisk(e)y</option>
+  <option value="Wolverine Farm Letterpress and Publick House">Wolverine Farm Letterpress and Publick House</option>
+</select>
+
+<label>Musical Style</label>
+<select id="style">
+  <option value="Metal-Punk-Hardcore">Metal-Punk-Hardcore</option>
+  <option value="Rock-Pop">Rock-Pop</option>
+  <option value="Country-Bluegrass-Americana">Country-Bluegrass-Americana</option>
+  <option value="TBA">TBA</option>
+  <option value="Electronic-DJ">Electronic-DJ</option>
+  <option value="Indie-Alternative">Indie-Alternative</option>
+  <option value="Hip Hop-Rap">Hip Hop-Rap</option>
+  <option value="Cover-Tribute">Cover-Tribute</option>
+  <option value="Blues-Jazz">Blues-Jazz</option>
+  <option value="Acoustic-Folk">Acoustic-Folk</option>
+  <option value="Singer-Songwriter">Singer-Songwriter</option>
+  <option value="Comedy">Comedy</option>
+  <option value="R&B-Soul-Funk">R&B-Soul-Funk</option>
+  <option value="World-Reggae-Latin">World-Reggae-Latin</option>
+  <option value="Children\'s Program">Children's Program</option>
+  <option value="Experimental-Noise-Visual">Experimental-Noise-Visual</option>
+</select>
+
+<label>Url for artist's photo (please include http:// or https://)</label><input id="art_image" placeholder="URL for Photo" class="artistinput" required></input>
+<label>Url for artist's website (please include http:// or https//)</label><input id="website" placeholder="URL for Website" class="artistinput" required></input>
+<label>Url for artist's Facebook page (please include http:// or https//)</label><input id="facebook" placeholder="URL for Facebook Page" class="artistinput" required></input>
+<label>Url for a demo song (please include http:// or https//)</label>
+<b>Included sources include Spotify.....</b><input id="music" placeholder="URL for Demo Song" class="artistinput" required></input>
+
+<button id="partnercreate" onclick="createshow_submit()">Create Partner</button>
+
+<!-- End of partner input -->
+
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading2">
+      <h3 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse2" aria-expanded="true" aria-controls="collapse2" class="collapsed">
+          <span>Edit an Existing Show</span> <i class="glyphicon glyphicon-plus"></i>
+        </a>
+      </h3>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+      <div class="panel-body">
+        <h2>Edit Show Information</h2>
+
+        <select id="show_to_edit" onchange="load_partner_to_edit()">
+  <option>Select a Show to Edit</option>
+</select>
+
+
+
+<input id="showid_edit" style="display: none !important"></input>
+<input id="recordid" style="display: none !important"></input>
+<label>Artist or Show Name</label><input id="artist_edit" placeholder="Artist/Band Name" class="artistinput" required></input>
+<label>What Day is the Show?</label>
+<select id="day_edit">
+  <option value="Fri">Friday</option>
+  <option value="Sat">Saturday</option>
+</select>
+<label>Show Start Time<input type="time" id="starttime_edit" min="00:00" max="24:00" required></input></label>
+<label>Show End Time<input type="time" id="endtime_edit" min="00:00" max="24:00" required></input></label>
+
+<label>Is the Show Still Active? Turn to Disabled if this Show Will No Longer Be Occurring. Edit the show but keep it active if only the show details are changing.</label>
+<select id="active_edit">
+  <option value="1">Active</option>
+  <option value="0">Disable</option>
+</select>
+
+
+<label>Description of Show</label><textarea id="description_edit" rows="4" cols="50" placeholder="Show Description"></textarea>
+
+
+
+<label>Show Location</label>
+<select id="venue_edit">
+  <option value="Aggie Theater" vid="agg">Aggie Theater</option>
+  <option value="The Armory" vid="arm">The Armory</option>
+  <option value="Avo\'s" vid="avo">Avo's</option>
+  <option value="The Colorado Room" vid="cor">The Colorado Room</option>
+  <option value="Downtown Arterty" vid="art">Downtown Arterty</option>
+  <option value="Downtown Artery (Main Gallery)" vid="artg">Downtown Artery (Main Gallery)</option>
+  <option value="Downtown Artery (Narnia)" vid="artn">Downtown Artery (Narnia)</option>
+  <option value="The East Coast" vid="est">The East Coast</option>
+  <option value="Elliot\'s Martini Bar" vid="ell">Elliot's Martini Bar</option>
+  <option value="Equinox Brewing" vid="equ">Equinox Brewing</option>
+  <option value="Everyday Joe\'s Coffee House">Everyday Joe's Coffee House</option>
+  <option value="Fort Collins Museum of Discovery - Dome">Fort Collins Museum of Discovery - Dome</option>
+  <option value="Fort Collins Museum of Discovery - Garage">Fort Collins Museum of Discovery - Garage</option>
+  <option value="High Point Bar">High Point Bar</option>
+  <option value="Hodi\'s Half Note">Hodi's Half Note</option>
+  <option value="Illegal Pete\'s">Illegal Pete's</option>
+  <option value="The Lyric">The Lyric</option>
+  <option value="Magic Rat">Magic Rat</option>
+  <option value="Moe\'s Original Bar B Que">Moe's Original Bar B Que</option>
+  <option value="New Belgium Brewing - Outside">New Belgium Brewing - Outside</option>
+  <option value="New Belgium Brewing - Tasting Room">New Belgium Brewing - Tasting Room</option>
+  <option value="Odell Brewing Co">Odell Brewing Co</option>
+  <option value="Prost Brewing Company">Prost Brewing Company</option>
+  <option value="R Bar and Lounge">R Bar and Lounge</option>
+  <option value="The Rec Room">The Rec Room</option>
+  <option value="The Rickshaw Live">The Rickshaw Live</option>
+  <option value="The Rio Grande - Agave Room">The Rio Grande - Agave Room</option>
+  <option value="Scrumpy\'s">Scrumpy's</option>
+  <option value="Sound Off Silent Disco at Old Town Square">Sound Off Silent Disco at Old Town Square</option>
+  <option value="Surfside 7">Surfside 7</option>
+  <option value="Tap N Handle">Tap N Handle</option>
+  <option value="Tony\'s Rooftop">Tony's Rooftop</option>
+  <option value="Washington\'s FoCo">Washington's FoCo</option>
+  <option value="The Whisk(e)y">The Whisk(e)y</option>
+  <option value="Wolverine Farm Letterpress and Publick House">Wolverine Farm Letterpress and Publick House</option>
+</select>
+
+<label>Musical Style</label>
+<select id="style_edit">
+  <option value="Metal-Punk-Hardcore">Metal-Punk-Hardcore</option>
+  <option value="Rock-Pop">Rock-Pop</option>
+  <option value="Country-Bluegrass-Americana">Country-Bluegrass-Americana</option>
+  <option value="TBA">TBA</option>
+  <option value="Electronic-DJ">Electronic-DJ</option>
+  <option value="Indie-Alternative">Indie-Alternative</option>
+  <option value="Hip Hop-Rap">Hip Hop-Rap</option>
+  <option value="Cover-Tribute">Cover-Tribute</option>
+  <option value="Blues-Jazz">Blues-Jazz</option>
+  <option value="Acoustic-Folk">Acoustic-Folk</option>
+  <option value="Singer-Songwriter">Singer-Songwriter</option>
+  <option value="Comedy">Comedy</option>
+  <option value="R&B-Soul-Funk">R&B-Soul-Funk</option>
+  <option value="World-Reggae-Latin">World-Reggae-Latin</option>
+  <option value="Children\'s Program">Children's Program</option>
+  <option value="Experimental-Noise-Visual">Experimental-Noise-Visual</option>
+</select>
+
+<label>Url for artist's photo (please include http:// or https://)</label><input id="art_image_edit" placeholder="URL for Photo" class="artistinput" required></input>
+
+<label>Url for artist's website (please include http:// or https//)</label><input id="facebook_edit" placeholder="URL for Facebook Page" class="artistinput" required></input>
+<label>Url for artist's Facebook page (please include http:// or https//)</label><input id="website_edit" placeholder="URL for Website" class="artistinput" required></input>
+<label>Url for a demo song (please include http:// or https//)</label>
+<b>Included sources include Spotify.....</b>
+<input id="music_edit" placeholder="URL for Demo Song" class="artistinput" required></input>
+
+
+<button id="partnerupdate" onclick="updateshow_submit()">Update Show Information</button>
+
+<!-- End of partner input -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <h2>Account Management</h2>
+<div id="notloggedin" >
+
+<input id="emailsignin" placeholder="Email Address"></input>
+<input id="passwordsignin" type="password" placeholder="Password"></input>
+<button id="usersignin">Sign In</button>
+<h2 id='loginresult'></h2>
+
+<!--Reset Password -->
+<br>
+<input id="user_email_reset" placeholder="Email Associated with Account"></input>
+<button id="useremailreset">Request Email Reset</button>
+</div>
+
+
+
+
+
+
+<!--Update Password -->
+<div id="user_management" >
+<br>
+<input id="update_password" placeholder="New Password"></input>
+<button id="updatepassword">Update Password</button>
+
+<!-- Sign Out -->
+<div id="signout" >
+<button id="usersignout">Sign Out</button>
+</div>
+
+
+
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="js/index.js"></script>
+
+ <script type="text/javascript">
+//Check if user is logged in
+
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+      var x = document.getElementById("notloggedin");     /*Hide login page when users log in*/
+      
+
+      var y = document.getElementById("signout");         /*Show sign out when logging in*/
+
+
+
+  } else {
+    
+   
+  }
+});
+
+</script>
+
+  </body>
+
+
+</html>

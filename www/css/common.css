@@ -9,7 +9,7 @@ body {overflow-x: hidden;
 }
 
 h1, .h1 {
-    font-size: 9vw;
+    font-size: 7vw;
 }
 
 p {padding: 3px;
@@ -170,8 +170,9 @@ img.hover-shadow {
 }
 
 thead {
-  border-bottom: 
-    5px solid #f9c30d;
+  border-bottom: 5px solid #1c9ad6;
+  font-size: 0.5em;
+  padding:0px !important;
 }
 
 table thead tr{
@@ -195,8 +196,8 @@ tr {
     box-shadow: 0 0 1rem transparentize( black, 0.9 );
 }
 
-tr:nth-child(odd) {background: #cb1e26}
-tr:nth-child(even) {background: white}
+tr:nth-child(odd) {background: #173963}
+tr:nth-child(even) {background: #778899}
 
 td {
     display: inline-block;
@@ -268,7 +269,7 @@ padding-top: 5px;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 font-weight: bold;
-background-color: #f9c30d;
+background-color: #1c9ad6;
 font-size: 0.9em;
 }
 
@@ -289,7 +290,7 @@ padding-top: 3px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border-radius: 40px;
 font-weight: bolder;
-background-color: #f9c30d;
+background-color: #1c9ad6;
 font-size: 0.9em;
 }
 
@@ -308,7 +309,7 @@ padding-left:0;
 
 }
 .heart a{
-  color: black;
+  color: white;
 }
 
 img#nav_image {
@@ -353,9 +354,9 @@ td.bottomrow button {
 }
 
 #myInput {
-  width:70.5vw;
+  width:85vw;
   margin-left: 2vw;
-  height: 50px;
+  height: auto !important;
   font-weight: bolder;
   margin-bottom: 10px;
   text-align: center;
@@ -364,11 +365,11 @@ td.bottomrow button {
 
 #clearbutton {
   width:10vw;
-  height: 50px;
+  height: 20px;
     font-weight: bolder;
   margin-bottom: 10px;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 1.5em;
   color: red;
   background-color: transparent;
   border:none;
@@ -377,7 +378,7 @@ td.bottomrow button {
 #myInput2 {
   width:80.5vw;
   margin-left: 2vw;
-  height: 50px;
+  height: 20px;
   font-weight: bolder;
   margin-bottom: 10px;
   text-align: center;
@@ -386,11 +387,11 @@ td.bottomrow button {
 
 #clearbutton2 {
   width:10vw;
-  height: 50px;
-    font-weight: bolder;
+  height: auto !important;
+  font-weight: bolder;
   margin-bottom: 10px;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 1.5em;
   color: red;
   background-color: transparent;
   border:none;
@@ -402,7 +403,7 @@ td.bottomrow button {
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #cb1e26;
+  background-color: #173963;
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
@@ -417,7 +418,7 @@ td.bottomrow button {
 .topnav a {
   float: left;
   display: block;
-  color: black;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -432,7 +433,7 @@ a.topnav_link {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 3.5vw;
-  background-color: #F9C30D;
+  background-color: #1c9ad6;
   border-color: #000;
   border-style: solid;
   margin-bottom: 3px;
@@ -624,7 +625,7 @@ padding: 10px;}
 
 /*FAQ Panels*/
 .panel-default>.panel-heading {
-  background-color: #f9c30d; */
+  background-color: #1c9ad6; */
 }
 
 .panel-group .panel {
@@ -645,8 +646,8 @@ h4.panel-title {
 
 /* External Buttons */
 .external_btn {
-  background:linear-gradient(to bottom, #cb1e26 5%, black 100%);
-  background-color:#cb1e26;
+  background:linear-gradient(to bottom, #173963 5%, black 100%);
+  background-color:#173963;
   border-radius:28px;
   display:inline-block;
   color:#FFF;
@@ -664,11 +665,14 @@ h4.panel-title {
 }
 
 .sponsor_col {
-    width: 45%;
+    width: 100vw;
     margin: 0;
     float: left;
-    margin-left: 3%;
     text-align: center;
+}
+
+.sponsor_col a {
+  color: white !important;
 }
 
 img.sponsor_img {
@@ -712,8 +716,8 @@ th.table-filterable {
 }
 
 /* Hide empty href links*/
-A[href=""], A[href="#"] {
-  display: none;
+A[href=""], A[href="#"], A[href="undefined"] {
+  display: none !important;
 }
 
 /*Reduce size of selector */
@@ -768,4 +772,50 @@ height:10vw;;
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
-}.show-2,.show-4,.show-6,.show-8,.show-10,.show-12,.show-14,.show-16,.show-18,.show-20,.show-22,.show-24,.show-26,.show-28,.show-30,.show-32,.show-34,.show-36,.show-38,.show-40,.show-42,.show-44,.show-46,.show-48,.show-50,.show-52,.show-54,.show-56,.show-58,.show-60,.show-62,.show-64,.show-66,.show-68,.show-70,.show-72,.show-74,.show-76,.show-78,.show-80,.show-82,.show-84,.show-86,.show-88,.show-90,.show-92,.show-94,.show-96,.show-98,.show-100,.show-102,.show-104,.show-106,.show-108,.show-110,.show-112,.show-114,.show-116,.show-118,.show-120,.show-122,.show-124,.show-126,.show-128,.show-130,.show-132,.show-134,.show-138,.show-140,.show-142,.show-144,.show-146,.show-148,.show-150,.show-152,.show-154,.show-156,.show-158,.show-160,.show-162,.show-164,.show-166,.show-168,.show-170,.show-172,.show-174,.show-176,.show-178,.show-180,.show-182,.show-184,.show-186,.show-188,.show-190,.show-192,.show-194,.show-196,.show-198,.show-200,.show-202,.show-204,.show-206,.show-208,.show-210,.show-212,.show-214,.show-216,.show-218,.show-220,.show-222,.show-224,.show-226,.show-228,.show-230,.show-232,.show-234,.show-236,.show-238,.show-240,.show-242,.show-244,.show-246,.show-248,.show-250,.show-252,.show-254,.show-256,.show-258,.show-260,.show-262,.show-264,.show-266,.show-268,.show-270,.show-272,.show-274,.show-276,.show-278,.show-280,.show-282,.show-284,.show-286,.show-288,.show-290,.show-292,.show-294,.show-296,.show-298,.show-300,.show-302,.show-306,.show-308,.show-310,.show-312,.show-314,.show-316,.show-318,.show-320,.show-322,.show-324,.show-326,.show-328,.show-330,.show-332,.show-334,.show-336,.show-338,.show-340,.show-342,.show-344,.show-346,.show-348,.show-350,.show-354,.show-356,.show-358,.show-360,.show-362,.show-364,.show-366,.show-368,.show-370,.show-372,.show-374,.show-378,.show-380,.show-382,.show-384,.show-386,.show-388,.show-390,.show-392,.show-394,.show-398,.show-400,.show-402,.show-404,.show-406,.show-410,.show-412,.show-414,.show-416,.show-418,.show-424,.show-426,.show-428,.show-430,.show-432,.show-434,.show-436,.show-438,.show-440,.show-442,.show-444,.show-446,.show-448,.show-450,.show-452,.show-454,.show-456,.show-458,.show-460,.show-466,.show-468,.show-470,.show-472,.show-474,.show-476,.show-478,.show-480,.show-484,.show-486,.show-488,.show-490,.show-492,.show-494,.show-496,.show-498,.show-500,.show-502,.show-504,.show-506,.show-508,.show-510,.show-512,.show-516,.show-517,.show-518,.show-520,.show-522,.show-524,.show-526,.show-528,.show-530,.show-532,.show-534,.show-536,.show-538,.show-540,.show-544,.show-546,.show-548,.show-550,.show-552,.show-554,.show-556,.show-558,.show-560,.show-562,.show-564,.show-566,.show-568,.show-570,.show-572,.show-574,.show-576,.show-578,.show-580,.show-582,.show-584,.show-585,.show-590,.show-592,.show-594,.show-596,.show-598,.show-600,.show-602,.show-604,.show-606,.show-608,.show-610,.show-612,.show-614,.show-616,.show-618,.show-620,.show-624,.show-626,.show-628,.show-630,.show-632,.show-634,.show-636,.show-638,.show-640,.show-642,.show-644,.show-646,.show-648,.show-650,.show-652,.show-654,.show-656,.show-657,.show-660,.show-664,.show-666,.show-668,.show-670,.show-672,.show-674,.show-676,.show-678,.show-680,.show-682,.show-684,.show-686,.show-688,.show-690,.show-692,.show-694,.show-696,.show-698,.show-700,.show-702,.show-704,.show-706,.show-708,.show-710,.show-712,.show-714,.show-716,.show-718,.show-720,.show-722,.show-724,.show-726,.show-728,.show-730,.show-732,.show-734,.show-736,.show-738,.show-740,.show-742,.show-744{display:none;}
+  background-color: #173963 !important;
+  color: white;
+  font-size: 1.6em;
+}
+
+
+/*Radio button formatting*/
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 5px !important;
+    font-family: sans-serif, Arial;
+    font-size: 0.9em;
+    border: 2px solid #173963;
+    border-radius: 4px;
+    margin: 0px !important;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color:#1c9ad6;
+    border-color: #173963;
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+    border: 2px solid #173963;
+}
+
+form#first_radios {
+    text-align: center;
+}
+
+form#second_radios {
+    text-align: center;
+}
+
+
+.panel-default>.panel-heading+.panel-collapse .panel-body {
+  font-weight: normal !important;
+  font-size: 0.7em;
+}
+

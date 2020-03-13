@@ -1,47 +1,88 @@
-$(function() {
-   function moveRow(row, targetTable, newLinkText){
-       $(row)
-           .appendTo(targetTable)
-           .find("A")
-             .text(newLinkText);
+//Original method of adding row to "personal favorites" list
 
-   }
+// $(function() {
+//    function moveRow(row, targetTable, newLinkText){
+//        $(row)
+//            .appendTo(targetTable)
+//            .find("A")
+//              .text(newLinkText);
+
+//    }
    
-   $("#FIRST").on("click",'a', function(){
-       moveRow($(this).parents("tr"), $("#SECOND").clone(), "Add to My List");
-   });
+//    $("#FIRST").on("click",'a', function(){
+//        moveRow($(this).parents("tr"), $("#SECOND").clone(), "Add to My List");
+//    });
 
-   $("#SECOND").on("click",'a', function(){
-       moveRow($(this).parents("tr").clone(), $("#FIRST"), "X");
+//    $("#SECOND").on("click",'a', function(){
+//        moveRow($(this).parents("tr").clone(), $("#FIRST"), "X");
 
-  /* Look for and remove duplicate rows */
-       var seen = {};
-        $('table tr').each(function() {
-          var txt = $(this).text();
-          if (seen[txt])
-            $(this).remove();
-          else
-            seen[txt] = true;
-        });
-      /*End - Look for and remove duplicate rows */
-
-
-
-       sortTable();
-       document.getElementById('favorites').scrollIntoView();
-   });
-   $('#FIRST,#SECOND').on('click','a',function() {
-     localStorage.setItem('FIRST',$('#FIRST').html());
-     /*localStorage.setItem('SECOND',$('#SECOND').html());*/
-   });
-   var first = localStorage.getItem('FIRST');
-   /*var second = localStorage.getItem('SECOND');*/
-   !first || $('#FIRST').html(first);
-   /*!second || $('#SECOND').html(second);*/
-
-});
+//   /* Look for and remove duplicate rows */
+//        var seen = {};
+//         $('table tr').each(function() {
+//           var txt = $(this).text();
+//           if (seen[txt])
+//             $(this).remove();
+//           else
+//             seen[txt] = true;
+//         });
+//       /*End - Look for and remove duplicate rows */
 
 
+
+//        sortTable();
+//        document.getElementById('favorites').scrollIntoView();
+//    });
+//    $('#FIRST,#SECOND').on('click','a',function() {
+//      localStorage.setItem('FIRST',$('#FIRST').html());
+//      /*localStorage.setItem('SECOND',$('#SECOND').html());*/
+//    });
+//    var first = localStorage.getItem('FIRST');
+//    /*var second = localStorage.getItem('SECOND');*/
+//    !first || $('#FIRST').html(first);
+//    /*!second || $('#SECOND').html(second);*/
+
+// });
+
+//Adding show to personal list
+ $("#SECOND").on("click",'a', function(){
+
+  try {
+  var personallist = JSON.parse(localStorage.getItem('focomxlist'));    //see if personal tracking list exists
+  }
+  catch {}
+  if (localStorage.getItem('focomxlist') === null) {                    //if personal tracking list doesn't exist then seed it
+    var seeding =["rand1","rand2"]
+    localStorage.setItem('focomxlist',JSON.stringify(seeding));
+    }
+
+    var personallist = localStorage.getItem('focomxlist');              //pull personal list from local storage
+    var personallist=JSON.parse(personallist);                          //make the list usable
+    var temp = this.id;                                                 //id of the current show
+
+
+  personallist.indexOf(temp) === -1 ? personallist.push(temp) : console.log("This item already exists");  //add current show to list if it doesn't already exist
+  localStorage.setItem('focomxlist',JSON.stringify(personallist));      //update personal list in local storage
+
+
+ })
+
+//Removing show from personal list
+  $("#FIRST").on("click",'a', function(){
+
+    //remove old content loaded in table so that new content can be added
+    var tableRef = document.getElementById('FIRST').getElementsByTagName('tbody')[0];
+    tableRef.innerHTML ="";
+
+    var personallist = localStorage.getItem('focomxlist');              //pull personal list from local storage
+    var personallist=JSON.parse(personallist);                          //make the list usable
+    var temp = this.id;                                                 //id of the current show
+    var location=personallist.indexOf(temp); 
+    personallist.splice(location,1)                                     //remove current show to list
+    localStorage.setItem('focomxlist',JSON.stringify(personallist));    //update personal list in local storage
+
+    loadfavorites();
+    sortTable();
+ })
 
 
 function sortTable(){
@@ -69,6 +110,7 @@ function openModal() {
   document.getElementById('myModal').style.display = "block";
 
   var imgEl = document.getElementsByTagName('img');
+
 for (var i=0; i<imgEl.length; i++) {
     if(imgEl[i].getAttribute('data-src')) {
        imgEl[i].setAttribute('src',imgEl[i].getAttribute('data-src'));
@@ -81,30 +123,41 @@ for (var i=0; i<imgEl.length; i++) {
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
 
+  var els = document.getElementsByClassName("mySlides");
+
+  [].forEach.call(els, function (el) {el.style.display = "none"});
+
+
+
+}
+
+function showslide(n){
+  document.getElementById(n).style.display = "block";
+
 }
 
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1};
-  if (n < 1) {slideIndex = slides.length};
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("demo");
+//   var captionText = document.getElementById("caption");
+//   if (n > slides.length) {slideIndex = 1};
+//   if (n < 1) {slideIndex = slides.length};
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+//   captionText.innerHTML = dots[slideIndex-1].alt;
+// }
 
 /* Card Layout for Table */
 
@@ -192,30 +245,30 @@ var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
 
 
 function my_favs() {
-  modal_save_close();  
-window.location.reload()
-var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
+modal_save_close();  
+// window.location.reload()
+var rows = JSON.parse(localStorage.getItem('focomxlist')).length;
 
 
- if (rows >= 2) {
+ if (rows > 2) {
     my_favs2();
   }
 
 }
 
 
-function modal_save_close() {
+function modal_save_close() {   //gets called when user elects to stay on main show page
   modal_save.style.display = "none";
 }
 
 
-function modal_save_shows() {
+function modal_save_shows() {   //get called when user goes to their show list after adding show
 modal_save_close();  
 window.location.reload()
-var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
+var rows = JSON.parse(localStorage.getItem('focomxlist')).length;
 
 
- if (rows >= 2) {
+ if (rows > 2) {
     my_favs2();
   }
 }
@@ -226,6 +279,10 @@ hide();
 document.getElementById('fav').style.display = 'block';
 document.getElementById('myInput2').value = '';   
 document.getElementById('myshowsnav').style.display = '';
+document.getElementById('no_shows').style.display = 'none';
+document.getElementById('schedule').style.display = 'none';
+
+console.log("my favs run?")
 
 
 
@@ -290,11 +347,252 @@ function hide () {
     }
 }
 
-function checkstatus () {
-  var rows = document.getElementById("FIRST").getElementsByTagName("tr").length;
+function loadmain () {
 
-  if (rows >= 2) {
-    my_favs2();
+
+  //remove old content loaded in table so that new content can be added
+  var tableRef = document.getElementById('SECOND').getElementsByTagName('tbody')[0];
+  tableRef.innerHTML ="";
+
+  var venuesUrl = 'http://orangehousellc.com/OrangeHouse/FoCoMX/artist.json';    //Get url of venues JSON file
+  $.getJSON(venuesUrl, function(data){
+  var entry = data;
+  console.log(entry)
+
+
+  for (i = 1; i < entry.length; i++) {
+
+    //Determine which time frame filter is selected
+
+  const secondsSinceEpoch = Math.round(Date.now() / 1000)  
+
+  var timefilter=1;
+
+  if (document.getElementById("sr2").checked){
+    if (entry[i].startepoch <=secondsSinceEpoch && entry[i].endepoch >=secondsSinceEpoch){var timefilter=1}
+      else {var timefilter=0;}
+  };
+  
+  if (document.getElementById("sr3").checked) {
+    if (entry[i].startepoch >=secondsSinceEpoch) {var timefilter=1}
+      else {var timefilter=0;}
+  };
+  
+
+
+    if (entry[i].active==1 && timefilter == 1){
+
+  //loading of content
+      //Loading artist front page
+      var rowtemplate ='<tr class="content show-1 hide-1"><td class="sortnr" style="display:none;">{startepoch}</td><td style="display:none;">{endepoch}</td><td class="tpl">{date}</td><td class="tpr" style="display:none;">{starttime}</td><td class="tpr">{time}</td><td class="tpr">{style}</td><td class="middlerow"><button onclick="openModal();showslide(&#39;{artistid}&#39;)">{artist}</button></td><td class="bottomrow"><button onclick="openModal();showslide(&#39;{locationid}&#39;)">{venue}</button></td><td class="heart"><a href="#favorites" onclick="my_favs_star()" id="{showid}">&#x2605;</a></td></tr>'
+      var toload = rowtemplate.replace("{date}", entry[i].day);
+      var toload = toload.replace("{starttime}", entry[i].starttime);
+      var toload = toload.replace("{time}", entry[i].starttime+" - "+entry[i].endtime);
+      var toload = toload.replace("{style}", entry[i].style);
+      var toload = toload.replace("{artistid}", entry[i].artistid);
+      var toload = toload.replace("{locationid}", entry[i].locationid);
+      var toload = toload.replace("{artist}", entry[i].artist);
+      var toload = toload.replace("{venue}", entry[i].venue);
+      var toload = toload.replace("{showid}", entry[i].showid);
+      var toload = toload.replace("{startepoch}", entry[i].startepoch);
+      var toload = toload.replace("{endepoch}", entry[i].endepoch);
+      var tableRef = document.getElementById('SECOND').getElementsByTagName('tbody')[0];
+      tableRef.insertAdjacentHTML('beforeend', toload);
+      //End of loading artist front page
+
+
+      //Loading artist details
+      var rowtemplate ='<div class="mySlides" id="{artistid}" style="display:none;"><h2 class="artist">{artist}</h2><h3 class="artist">{style}</h3><p class="artist">{description}<div class="artist_img_div"><img data-src="{image}" alt="web logo" class="artist_img" width="200"></div><img><div class="artist"><a href="{musiclink}" target="_blank" ><img data-src="img/listen.png"class="link_img"></a></div><h3 class="artist" style="font-size:0.95em;">Learn More About the Artist</h3><div class="artist"><a href="{facebook}" target="_blank" title=""><img data-src="img/facebook.png" alt="facebook logo" class="link_img"></a></div><div class="artist"><a href="{website}" target="_blank" title=""><img data-src="img/web.png" alt="web logo" class="link_img"></a></div></div>'
+      var toload = rowtemplate.replace("{artistid}", entry[i].artistid);
+      var toload = toload.replace("{artist}", entry[i].artist);
+      var toload = toload.replace("{style}", entry[i].style);
+      var toload = toload.replace("{description}", entry[i].description);
+      var toload = toload.replace("{facebook}", entry[i].facebook);
+      var toload = toload.replace("{website}", entry[i].website);
+      var toload = toload.replace("{musiclink}", entry[i].music);
+      var toload = toload.replace("{image}", entry[i].art_image);
+      var tableRef = document.getElementById('myModal').getElementsByClassName('modal-content')[0];
+      tableRef.insertAdjacentHTML('beforeend', toload);
+      
+      }
+      //End of loading artist details
+  else {} //skips loading if active level is set to 0
+  //end of loading of content
+
+}
+
+
+//Load location information
+var venuesUrl = 'http://orangehousellc.com/OrangeHouse/FoCoMX/venues.json';    //Get url of venues JSON file
+  $.getJSON(venuesUrl, function(data){
+  var entry = data;
+
+
+
+  for (i = 0; i < entry.length; i++) {
+var rowtemplate ='<div class="mySlides" id="{locationid}"><h2 class="artist">{name}</h2><h3 class="artist">{address}</h3><p class="artist"><img data-src="{image}" alt="FocoBanner" style="width: 100%;"></p><p style="font-size:1.8em;">{ages}</p><p>{description}</p><p>Head over to the map page to get more details on where to find this venue.</p></div>';
+var toload = rowtemplate.replace("{locationid}", entry[i].locationid);
+var toload = toload.replace("{name}", entry[i].name);
+var toload = toload.replace("{description}", entry[i].description);
+var toload = toload.replace("{address}", entry[i].address);
+var toload = toload.replace("{image}", entry[i].image);
+var toload = toload.replace("{ages}", entry[i].ages);
+var tableRef = document.getElementById('myModal').getElementsByClassName('modal-content')[0];
+tableRef.insertAdjacentHTML('beforeend', toload);
+}
+})
+//End of loading locations
+
+});
+
+
+}
+
+function loadfavorites() {
+
+  //remove old content loaded in table so that new content can be added
+  var tableRef = document.getElementById('FIRST').getElementsByTagName('tbody')[0];
+  tableRef.innerHTML ="";
+
+//Loading personal list\
+
+  var venuesUrl = 'http://orangehousellc.com/OrangeHouse/FoCoMX/artist.json';    //Get url of venues JSON file
+  $.getJSON(venuesUrl, function(data){
+  var entry = data;
+
+  var personallist = localStorage.getItem('focomxlist');              //pull personal list from local storage
+  var personallist=JSON.parse(personallist);                          //make the list usable
+
+  
+
+  for (i = 1; i < entry.length; i++) {
+
+
+  //Determine which time frame filter is selected
+
+  const secondsSinceEpoch = Math.round(Date.now() / 1000)  
+
+  var timefilter=1;
+
+  if (document.getElementById("fr2").checked){
+    if (entry[i].startepoch <=secondsSinceEpoch && entry[i].endepoch >=secondsSinceEpoch){var timefilter=1}
+      else {var timefilter=0;}
+  };
+  
+  if (document.getElementById("fr3").checked) {
+    if (entry[i].startepoch >=secondsSinceEpoch) {var timefilter=1}
+      else {var timefilter=0;}
+  };
+  
+  
+
+
+  if (entry[i].active==1 && personallist.indexOf(entry[i].showid) !== -1 && timefilter == 1){
+  //loading of content
+      //Loading artist front page
+      var rowtemplate ='<tr class="content show-1 hide-1"><td class="sortnr" style="display:none;">{startepoch}</td><td style="display:none;">{endepoch}</td><td class="tpl">{date}</td><td class="tpr" style="display:none;">{starttime}</td><td class="tpr">{time}</td><td class="tpr">{style}</td><td class="middlerow"><button onclick="openModal();showslide(&#39;{artistid}&#39;)">{artist}</button></td><td class="bottomrow"><button onclick="openModal();showslide(&#39;{locationid}&#39;)">{venue}</button></td><td class="heart"><a href="#favorites" onclick="my_favs_star()" id="{showid}">X</a></td></tr>'
+      var toload = rowtemplate.replace("{date}", entry[i].day);
+      var toload = toload.replace("{starttime}", entry[i].starttime);
+      var toload = toload.replace("{time}", entry[i].starttime+" - "+entry[i].endtime);
+      var toload = toload.replace("{style}", entry[i].style);
+      var toload = toload.replace("{artistid}", entry[i].artistid);
+      var toload = toload.replace("{locationid}", entry[i].locationid);
+      var toload = toload.replace("{artist}", entry[i].artist);
+      var toload = toload.replace("{venue}", entry[i].venue);
+      var toload = toload.replace("{showid}", entry[i].showid);
+      var toload = toload.replace("{startepoch}", entry[i].startepoch);
+      var toload = toload.replace("{endepoch}", entry[i].endepoch);
+
+      var tableRef = document.getElementById('FIRST').getElementsByTagName('tbody')[0];
+      tableRef.insertAdjacentHTML('beforeend', toload);
+      //End of loading artist front page
+     }
+  else {} //skips loading if active level is set to 0
+  //end of loading of content
+
+
+}
+
+})
+
+
+
+  load_js();
+
+
+
+
+    var venuesUrl = 'http://orangehousellc.com/OrangeHouse/FoCoMX/artist.json';    //Get url of venues JSON file
+  $.getJSON(venuesUrl, function(data){
+  var entry = data;
+
+  var personallist = localStorage.getItem('focomxlist');              //pull personal list from local storage
+  var personallist=JSON.parse(personallist);                          //make the list usable
+
+  
+
+    var timelinejson=[];
+    document.getElementById('visualization').innerHTML='';
+    var container = document.getElementById('visualization');
+  for (i = 1; i < entry.length; i++) {
+
+
+    if (entry[i].active==1 && personallist.indexOf(entry[i].showid) !== -1){
+
+
+    item = {}
+    item ["content"] = entry[i].artist;
+    item ["start"] = entry[i].startepoch*1000;
+    item ["end"] = entry[i].endepoch*1000;
+
+    timelinejson.push(item);
+
+    console.log(timelinejson)
+
+    }
+
+}
+
+  // Create a DataSet (allows two way data-binding)
+  var items = new vis.DataSet(timelinejson);
+
+  // Configuration for the Timeline
+  var options = {};
+
+  // Create a Timeline
+  var timeline = new vis.Timeline(container, items, options);
+})
+
+
+  }
+
+function checkstatus () {
+
+   try {
+  var personallist = JSON.parse(localStorage.getItem('focomxlist'));    //see if personal tracking list exists
+  }
+  catch {}
+  if (localStorage.getItem('focomxlist') === null) {                    //if personal tracking list doesn't exist then seed it
+    var seeding =["rand1","rand2"]
+    localStorage.setItem('focomxlist',JSON.stringify(seeding));
+    }
+
+
+
+  loadmain();
+  loadfavorites();
+  load_js();
+
+  var rows = JSON.parse(localStorage.getItem('focomxlist')).length;
+
+  console.log(rows + " row length")
+
+
+  if (rows > 2) {
+     document.getElementById('no_shows').style.display = 'none';
+     document.getElementById('schedule').style.display = 'none';
+     my_favs2();
+
   } else {
 
     if (localStorage.getItem("dismiss") == 1) {
@@ -311,7 +609,27 @@ function checkstatus () {
 
   document.getElementById('topview').scrollIntoView();
 
+setTimeout(function(){
+sortsort(); }, 1500);
  
+}
+
+function sortsort() {
+      var tbl = document.getElementById("SECOND").tBodies[0];
+    console.log("sorted?")
+    var store = [];
+    for(var i=0, len=tbl.rows.length; i<len; i++){
+        var row = tbl.rows[i];
+        var sortnr = parseFloat(row.cells[0].textContent || row.cells[0].innerText);
+        if(!isNaN(sortnr)) store.push([sortnr, row]);
+    }
+    store.sort(function(x,y){
+        return x[0] - y[0];
+    });
+    for(var i=0, len=store.length; i<len; i++){
+        tbl.appendChild(store[i][1]);
+    }
+    store = null;
 }
 
 function clear () {
@@ -1393,6 +1711,8 @@ adsite = new Array();
   var num = Math.floor( Math.random() * 20);
   var adselected = adsite[num];
 
+  ga_anl('send', 'event', 'ad', 'ad_number', adselected)
+
   setTimeout(function(){
 $("#footer").load( adselected );
   },500);
@@ -1414,18 +1734,22 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal_save.style.display = "block";
-}
+// btn.onclick = function() {
+//   modal_save.style.display = "block";
+// }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal_save.style.display = "none";
-  }
-}
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal_save.style.display = "none";
+//   }
+// }
+
+
+
+

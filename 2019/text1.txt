@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FoCo MX Music Schedule</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ <meta name="robots" content="noindex, nofollow">
+ <meta name="googlebot" content="noindex, nofollow">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+
+	<link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/common.css">
+
+<script src="js/admob2.js"></script>
+ <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+     <script async src="js/jquery-3.2.1.js"></script>
+
+
+  <script src="js/bootstrap.js"></script>
+  <!--<script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+  
+
+
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+
+
+   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+   integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+   crossorigin=""></script> 
+
+
+
+
+
+	
+
+
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<!--Reload page after 10 minutes -->
+<script type="text/javascript">
+setTimeout("CallButton()",600000)
+function CallButton()
+{
+  location.reload()   
+}
+</script>
+
+
+<!-- Load random image -->
+
+
+
+
+</head>
+
+
+
+<body onload="checkstatus()">
+
+
+
+
+<div class="topnav" id="myTopnav">
+  <a href="#" onclick="nav_function()" style="pointer-events: none;display: block;"><img src="img/pick.png" alt="FoCoMX logo" id="nav_image">    FoCoMX 2019</a>
+  <a href="#schedule" onclick="nav_function();schedule()" class="topnav_link">Shows</a>
+  <a href="#favorites" onclick="nav_function();my_favs()" class="topnav_link" style="display: none" id="myshowsnav">My Shows</a>
+  <a href="#foco" onclick="nav_function();foco()" class="topnav_link">About</a>
+  <a href="#map" onclick="nav_function();loadmap();map_int()" class="topnav_link">Map</a>
+  <a href="#sponsors" onclick="nav_function();sponsors()" class="topnav_link">Sponsors</a>
+  <a href="social.html" onclick="nav_function();social()" class="topnav_link">Social</a>
+  <a href="#donate" onclick="nav_function();donate()" class="topnav_link">Make a Donation</a>
+  <a href="#usage" onclick="nav_function();usage()" class="topnav_link">App How To</a>
+  <a href="javascript:void(0);" class="icon" onclick="nav_function()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<div id="topview"></div>
+
+<div class="navLinks" id="foco">
+<section  class="wide">
+
+<div style="font-size: 0.9em; text-align: center; padding-left:5px; padding-right: 8px;">
+<h3>FoCoMX 2019</h3>
+<p>The Fort Collins Musicians Association (FoCoMA) is proud to present the 11th Annual Fort Collins Music eXperiment (FoCoMX) on April 26 & 27, 2019.</p>
+<p>We are so lucky to have such a vibrant scene that is supported by music lovers and our community at large. Thank you to everyone for making such an event possible! FoCoMX, presented by the nonprofit Fort Collins Musicians Association (FoCoMA) is 2-day festival with well over 200 artists. Afternoon and evening performances offer a wealth of family-friendly programming. Later-evening performances feature rock, singer-songwriter, bluegrass, funk, reggae and more.</p>
+<p>FoCoMX started in 2009 as a grassroots experiment in promoting local music. The festival has grown over the years and we now see attendance of approximately 5500  and has garnering national attention and earning FoCoMX the unofficial title of &quot;The Biggest Little Festival in America.&quot;  </p>
+
+<a href="http://bit.ly/FoCoMX11_BlindFaith" target="_blank" class="external_btn">Buy Tickets!</a> 
+<a href="https://focomx.focoma.org/volunteer" target="_blank" class="external_btn">Volunteer</a> 
+</br></br>
+
+<h4>Frequently Asked Questions</h4>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading1">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                     At what age does a child need to purchase a wristband?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+            <div class="panel-body">
+                <p>If children are attending the festival itself and going to venues, they do need a wristband no matter how young they are, as they would still be counted towards legal occupancy at the venues. Wristbands are required for all venues, including all-ages venues, the museum, and, any non-childrens' programming. Wristbands for children are the same price as those for adults because, as part of our mission, we're trying to pay the artists fairly for playing.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading2">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    Where can I buy wristbands BEFORE the festival?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+            <div class="panel-body">
+                <p><a href="http://bit.ly/FoCoMX11_BlindFaith" target="_blank" >Buy Now</a></p>
+ 
+<p>Wristbands are on sale NOW through the Thursday, before the festival on the Tickets page! Or you can pay cash on the day of the <a href="http://focomx.focoma.org/tickets" target="_blank" >festival</a> ($40) or at one of our pre-parties ($25).</p>
+ 
+<p>(Or get one for free by becoming one of our <a href="http://focomx.focoma.org/volunteer" target="_blank">volunteers!</a>) </p>
+ 
+<p>Wristbands purchased online will be available at the ticket sales / Will Call booth at SPACES in Old Town at 242 Linden St, Fort Collins, CO 80524 during FoCoMX. </p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading3">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    Where can I buy wristbands the nights of the festival?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+            <div class="panel-body">
+                <p>The following places will sell tickets DURING the festival:</p>
+ 
+<p>The Will Call booth in Old Town, at SPACES at 242 Linden St, Fort Collins, CO 80524, will be open Friday and Saturday from noon to 11 PM, taking cash or credit card payments. Will Call is also the only place during the festival to pick up wristbands you purchased online.</p>
+ 
+<p>A limited number of physical wristband sales locations may be available, but Will Call is always your best bet with the most payment options. </p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading4">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    Can I pay for my wristband with a credit or debit card?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+            <div class="panel-body">
+                <p>Credit and debit cards will of course work <a href="http://focomx.focoma.org/tickets" target="_blank" >online.</a></p>
+ 
+<p>Cash or credit/debit cards are accepted at Will Call during the festival.</p>
+ 
+<p>Only cash will be accepted at the door of the limited number of venues selling wristbands during FoCoMX.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading5">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    Can I buy a wristband at the first venue I plan to attend?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+            <div class="panel-body">
+                <p>Please don't count on it! We sell wristbands at only a couple of our outlying venues, but there is always a chance that venue will run out of the very short supply they are given. </p>
+ 
+<p>We recommend you buy your wristband before the festival, or during FoCoMX at Will Call (cash or credit).</p>
+ 
+<p>Want a free wristband?</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading6">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                    If I buy my ticket online, how do I pick up my wristband?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+            <div class="panel-body">
+                <p>Please note that you CANNOT pick up your Will Call wristband at the door of any venue. Will Call in Old Town is the only place during the festival to get a wristband purchased online. Open noon-11pm both Friday and Saturday.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading7">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                    Do I need to keep the same wristband on for both days?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+            <div class="panel-body">
+                <p>YES! Your wristband is what gets you in the door at all the venues for both nights. They’re made of a durable cloth, can be worn for multiple days, and will even survive in the shower.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading8">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                    If I have a wristband, does it guarantee entry to any venue?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+            <div class="panel-body">
+                <p>The wristband allows you entry to any venue that is participating in FoCoMX. It is not a guaranteed entry however, as maximum occupancy of venues are enforced by the city fire marshal. If there is a particular show you want to see, we encourage you to arrive at that venue early to ensure your entry.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading9">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                    What are the age restrictions for the festival?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+            <div class="panel-body">
+                <p>See the Venues page for a listing of venues and their age restrictions. This information is also available in the Schedule for each event.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading10">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                    How late is the Will Call booth open?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+            <div class="panel-body">
+                <p>The Will Call booth in Old Town will be open from 12:00 PM - 11:00 PM on both Friday and Saturday.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading11">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                    Where is the FoCoMX Will Call booth located?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+            <div class="panel-body">
+                <p>Will Call will be set up at SPACES in Old Town at 242 Linden St, Fort Collins, CO 80524 in Old Town. Will Call is the only place during the festival to get a wristband purchased online.</p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading12">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                    Are there any hotel discounts this year?
+                </a>
+            </h4>
+        </div>
+        <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
+            <div class="panel-body">
+                <p>Yes! While rooms last (it's a busy weekend in Fort Collins!)...  </p>
+ 
+<p>The Best Western University Inn is one of our sponsors this year. We are very grateful to them for helping us keep festival costs low! Reserve your room <a href="https://www.bestwestern.com/en_US/book/hotel-rooms.06040.html?groupId=Y89DF1Z0" target="_blank" >online</a> with our discount link, or call 970-484-1984 using the code FoCoMX. You'll get discounted $89 rooms while they last. </p>
+<p>You can also use special FoCoMX discounts at the Hilton, (Code MFX, $134), while rooms last. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>About the Fort Collins Musicians Association</h3>
+<p>The Fort Collins Musicians Association&#39;s nonprofit mission is to provide education, support and networking opportunities to the Fort Collins (and surrounding) music community.</p>
+<p>FoCoMA.org provides education, support, and networking opportunities for the Fort Collins music community.</p>
+<a href="https://www.focoma.org" target="_blank" class="external_btn">Learn About the FoCoMA</a> 
+</div>
+
+
+
+   
+</section>
+</div>
+
+<div class="navLinks" id="social">
+<section  class="wide">
+<div class="twitter_respond" ><img src="img/twitter-bird-white.png" alt="web logo" style="height: 30px">
+<a href="https://twitter.com/intent/tweet?hashtags=focomx19%2C&ref_src=twsrc%5Etfw&tw_p=tweetbutton">Tweet #FoCoMX2019</a>
+
+</div>    
+<div class="twitter_div">
+<a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/FoCoMX?ref_src=twsrc%5Etfw">Tweets by FoCoMX</a><!--<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+</div>
+
+
+</section>
+</div>
+
+<div class="navLinks" id="donate">
+<section  class="wide">
+<h2>Make a Donation</h2>
+<p>We need your support to help us better serve the Fort Collins Community.</p>
+<p>Your donations can help the Fort Collins Musicians Association continue to support local music and put on events like FoCoMX.</p>
+<a href="https://www.focoma.org/donate" target="_blank" class="external_btn">Donate Today!</a> 
+</section>
+</div>
+
+
+<div class="navLinks" id="usage">
+<section  class="wide">
+<h2 style="text-align: center;">Navigation</h2>
+<p>The navigation menu (which is accessed by clicking the three horizontal bars in upper right corner of the page) will be your primary method of navigating the app.</p>
+<h2 style="text-align: center;">Shows</h2>
+<p>The "Shows" page lists all of the performances that will be going on during the FoCoMX weekend. We will be doing our best to keep this up to date if any changes occur.</p>
+<p>There are a LOT of show this year. You can filter the show list by date, start time, and keywords. You can remove filters and see the full list again at any time by clicking the &#9940; symbol.</p>
+<p>To help keep track of what shows you want to see you can create your own schedule. Create a custom schedule by clicking the star symbol (&#x2605;) next to shows you want to see. Those performances will be added to the "My Shows" list. To remove a show from the list click the "X" symbol. The first page which will load when opening the app will be "My Shows" after you've added at least one show to your custom schedule. You can always go back to the full schedule by clicking "Shows" in the navigation menu.</p>
+<h2 style="text-align: center;">Artist and Venue Details</h2>
+<p>You can learn more about specific artists and venues by clicking the yellow oval buttons in either the full show list or your custom schedule. If informaton is available, a pop-up box will open with brief band biographies, links to sample music, and artist website/Facebook pages. Not all artists pages may include samples songs or website/Facebook links.</p>
+<h2 style="text-align: center;">About Page</h2>
+<p>The "About" page includes details on the FoCoMX festival, the Fort Collins Music Association in general, as well as links to ticket purchases, volunteer opportunities, and frequently asked questions.</p>
+<h2 style="text-align: center;">Map Page</h2>
+<p>We've included an interactive map of where to find different venues around town. By choosing a venue from the dropdown menu at the top of the map, you can see where each of this years' music venues are located in town.</p>
+<h2 style="text-align: center;">Sponsors Page</h2>
+<p>The FoCoMX festival would not be possible without the generous support of our many sponsors. We highly encourage you to take a look at our sponsors page and to thank them for making FoCoMX possible.</p>
+<h2 style="text-align: center;">Social Page</h2>
+<p>The "Social" page includes a feed of the latest tweets from the FoCoMX team. We encourage you to join the conversation by posting images, videos, and stories with the hashtag #focomx2019.</p>
+</div>
+
+
+</section>
+</div>
+
+
+<div class="navLinks" id="schedule">
+<section id="schedule" class="wide">
+
+<div id="no_shows">
+  <h3 style="text-align: center;">Welcome to the 2019 FoCoMX App</h3>  
+  <p>We suggest you start by heading to the "App How To" link in the navigation menu above. Open the navigation menu by clicking the three horizontal bars ( &#9776; ) in the upper right corner.</p>
+  <p>The "How To" page outlines the major features and functions of this app and is designed to help you get the most our of your 2019 FoCoMX experience.</p>
+  <button onclick="removenote()" style="text-align: center;">Dismiss this note</button>
+
+</div>
+
+<h1 class="headers">Schedule</h1>
+
+<div id="myModal_save" class="modal_save" style="padding-top: 10vh;">
+
+  <!-- Modal content -->
+  <div class="modal-content_save">
+
+    <p>This show has been saved to your personal list</p>
+
+    <button onclick="modal_save_shows()" style="width:100%;margin-top: 10vw; height: 10vh;">Go to My Shows</button>
+
+    <br>
+    <button onclick="modal_save_close()" style="width:100%;margin-top: 10vw; height: 10vh;">Stay Here</button>
+  </div>
+
+</div>
+
+
+<input id="myInput" type="text" value="" placeholder="Type to Filter"/><button id="clearbutton" onclick="document.getElementById('myInput').value = ''">&#9940;</button>
+
+
+<TABLE ID="SECOND" class="table-autosort table-autofilter SECOND cards-table"> 
+  <thead>
+                        <tr>
+                          <th style="display:none;">ID</th>
+                            <th class="table-filterable" id="SECOND_select">Day &#160;</th>
+                            <th class="table-filterable">Start Time &#160;</th>
+                            <th style="display:none;">Full Time</th>
+                            <th style="display:none;">Venue</th>
+                            <th style="display:none;">Style</th>
+                            <th style="display:none;">Band</th>
+                            <th style="display:none;">Learn More</th>
+                            
+                        </tr>
+                    </thead>
+<tbody>
+       

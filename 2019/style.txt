@@ -1,0 +1,771 @@
+body, h1, h2, h3, p {font-family: "Raleway", sans-serif;}
+
+html {overflow-x: hidden;
+}
+
+body {overflow-x: hidden;
+  background-color: white;
+
+}
+
+h1, .h1 {
+    font-size: 9vw;
+}
+
+p {padding: 3px;
+text-align: center;}
+
+.container {
+    padding-right: 0px !important; 
+    padding-left: 0px !important; 
+  };
+
+td, th {
+	text-align: center;
+	padding: 3px;
+}
+
+table {
+	margin-bottom: 40px;
+}
+
+table, td, th, input {
+	border-radius: 3px;
+	border: 2px solid #ddd;
+	color: #555;
+  font-size:3.5vw;
+	line-height: 25px;
+}
+
+th.table-filterable {
+    font-size: 2em;
+    display: inline-table;
+}
+
+th {
+  width:100vw !important;
+  text-align: center;
+  border:none !important;
+
+}
+
+input {
+	padding: 4px 12px;
+}
+
+label {
+	margin-right: 14px;
+}
+
+.content-margin {
+	margin-top: 75px;
+}
+
+.person-filter {
+	margin-bottom: 25px;
+}
+
+.person-filter > li > a {
+	padding: 8px 12px;
+	font-size: 12px;
+}
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  overflow: scroll;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 60px;
+  font-weight: bolder;
+  padding-top:40px;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+
+
+
+.wrap {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+thead {
+  border-bottom: 
+    5px solid #f9c30d;
+}
+
+table thead tr{
+    display:block;
+}
+
+table  tbody{
+  display:block;
+  height:400px;
+  overflow:auto;//set tbody to auto
+}
+
+
+
+tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0.5rem 0.5rem 1rem;
+    margin-bottom:0px;
+  
+    box-shadow: 0 0 1rem transparentize( black, 0.9 );
+}
+
+tr:nth-child(odd) {background: #cb1e26}
+tr:nth-child(even) {background: white}
+
+td {
+    display: inline-block;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: white;
+    border: 1px solid transparentize( #58C25F, 0.5 );
+
+}
+
+td:before {
+    float: left;
+    margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+    padding: 0.625rem 0.5rem 0.625rem;
+    font-size: 0.75em;
+    font-weight: bold;
+    background: transparentize( #58C25F, 0.9 );
+    color: #58C25F;
+}
+
+td[data-label="Column D"] {
+    display: block;
+    float: none;
+
+    &:before {
+        display: block;
+        margin-right: -0.5rem;
+        margin-bottom: 0.5rem;
+        float: none;
+    }
+}
+
+td:empty {
+    display: none;
+}
+
+td.tpl {
+width:13vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 5px;
+
+
+font-weight: bold;
+font-size: 0.9em;
+
+}
+
+td.tpr {
+width:36vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 5px;
+
+
+font-weight: bold;
+font-size: 0.9em;
+}
+
+td.middlerow {
+width:92.0vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 5px;
+border-radius: 15px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-weight: bold;
+background-color: #f9c30d;
+font-size: 0.9em;
+}
+
+.middlerow button{
+  background-color: transparent;
+  border:none;
+  color:#000;
+  padding-bottom: 2px;
+
+}
+
+td.bottomrow {
+width:78.7vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 3px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 40px;
+font-weight: bolder;
+background-color: #f9c30d;
+font-size: 0.9em;
+}
+
+
+td.heart {
+width:11vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 3px;
+background-color: transparent;
+border:none;
+font-weight: bolder;
+font-size: 2em;
+padding-left:0;
+
+}
+.heart a{
+  color: black;
+}
+
+img#nav_image {
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+
+td.bottomrow a {color: white;}
+td.bottomrow button {
+  width:45.7vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 0px;
+background-color: transparent;
+color: #000;
+border: none;
+font-weight: bold;
+
+margin-top: -4px;
+margin-left: -6px;}
+
+button#sT {
+  width:98vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 0px;
+background-color: transparent;
+color: #555;
+border: none;
+font-weight: bold;
+
+margin-top: -4px;
+margin-left: -6px;}
+
+td.bottomrow button {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#myInput {
+  width:70.5vw;
+  margin-left: 2vw;
+  height: 50px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 5.5vw;
+}
+
+#clearbutton {
+  width:10vw;
+  height: 50px;
+    font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2.5em;
+  color: red;
+  background-color: transparent;
+  border:none;
+}
+
+#myInput2 {
+  width:80.5vw;
+  margin-left: 2vw;
+  height: 50px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 5.5vw;
+}
+
+#clearbutton2 {
+  width:10vw;
+  height: 50px;
+    font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2.5em;
+  color: red;
+  background-color: transparent;
+  border:none;
+}
+
+.menu{
+    margin:20px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #cb1e26;
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+
+  z-index: 99999;
+
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 4.5vw
+}
+
+a.topnav_link {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 3.5vw;
+  background-color: #F9C30D;
+  border-color: #000;
+  border-style: solid;
+  margin-bottom: 3px;
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  b
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: block;
+}
+
+
+
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #black;
+  padding: 1px 0;
+  margin: 0 10px;
+  transition: all 0.15s ease-in-out;
+}
+.hov-color-red.is-current,
+.hov-color-red:hover {
+   color: #ff765a;
+}
+.hov-color-green.is-current,
+.hov-color-green:hover {
+  color: #5aff8c;
+}
+.hov-color-blue.is-current,
+.hov-color-blue:hover {
+  color: #5acbff;
+}
+
+.wide {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  min-height: 100vh;
+}
+#schedule {
+
+  padding-top: 30px;
+}
+
+#map {
+
+  padding-top: 50px;
+}
+
+#usage {
+
+  padding-top: 50px;
+}
+
+#mapid {
+width: 100vw;
+height: 80vh;
+
+}
+
+#favorites {
+
+  padding-top: 50px;
+}
+#sponsor {
+
+  padding-top: 50px;
+}
+
+#foco {
+    background-color: white;
+    padding-top: 60px;
+    padding-bottom:30px;
+}
+
+#donate {
+    background-color: white;
+    padding-top: 60px;
+    padding-bottom:30px;
+    text-align:center;
+}
+
+h1.headers {
+  text-align: center;
+  color: black;
+}
+
+img.sponsor {width:30%;
+vertical-align: middle !important;}
+
+.sponsor {text-align: center;}
+
+.artist {
+  text-align: center;
+
+}
+
+.artist a {
+  color:black !important;
+  font-weight: bold;
+}
+
+p.artist  {
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+img.artist {}
+
+img.artist_img {
+ 
+  max-height:300px;
+  width: auto;
+  height: auto;
+}
+
+.artist_img_div {
+  text-align: center;
+}
+
+a.artist {text-align: center;
+  color:black;
+font-weight: bold;
+padding: 10px;}
+
+
+/* When the screen is less than 1800 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1800px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1800px) {
+  .topnav.responsive {
+    position: fixed;
+    padding-bottom: 10px;
+    border: solid 5px;}
+  .topnav.responsive a.icon {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 600px) {
+    /* Styles go here */
+    a.topnav_link {
+    font-size: 1vw;
+  }
+}
+ 
+
+
+
+.navLinks {
+    display: none;
+}
+
+
+#favorites.navLinks {
+    display: block;
+}
+
+
+/*FAQ Panels*/
+.panel-default>.panel-heading {
+  background-color: #f9c30d; */
+}
+
+.panel-group .panel {
+  background-color: white;
+}
+
+h4.panel-title {
+  font-weight: bolder;
+}
+
+#home a:link {
+  color:black;
+}
+
+
+
+
+
+/* External Buttons */
+.external_btn {
+  background:linear-gradient(to bottom, #cb1e26 5%, black 100%);
+  background-color:#cb1e26;
+  border-radius:28px;
+  display:inline-block;
+  color:#FFF;
+  font-size:4vw;
+  padding:16px 31px;
+  text-decoration:none;
+  margin-top:3px;
+  min-width: 50vw;
+}
+
+/* Sponsor Images */
+.sponsor_row {
+  padding-bottom:10px;
+  text-align: center;
+}
+
+.sponsor_col {
+    width: 45%;
+    margin: 0;
+    float: left;
+    margin-left: 3%;
+    text-align: center;
+}
+
+img.sponsor_img {
+  width: 100%;}
+
+
+/* Facebook and web links */
+img.link_img {
+  width:100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Twitter */
+.twitter_div {
+  padding-top: 15px;
+}
+
+.twitter_respond {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  background-color: #08a0e9;
+  border-radius: 30px;
+}
+
+
+/* Map Controls */
+.mySelector.leaflet-control {
+  font-size: 6vw;
+  font-family: "Raleway";
+}
+
+th#FIRST_select {
+  color:white;
+}
+
+th.table-filterable {
+  color:white;
+}
+
+/* Hide empty href links*/
+A[href=""], A[href="#"] {
+  display: none;
+}
+
+/*Reduce size of selector */
+.mySelector.leaflet-control {
+  max-width: 70vw;
+}
+
+
+
+div#no_shows {
+  display: none;
+
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+height:10vw;;
+  color: white;
+  text-align: center;
+
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;  
+
+
+}
+
+
+
+/* The Modal (background) */
+.modal_save {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content_save {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
