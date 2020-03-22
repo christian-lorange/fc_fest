@@ -36,8 +36,8 @@ function createshow_submit() {
     var date = '2020-4-24'
   }
 
-  var startepoch = new Date(date +' '+ starttime).valueOf();
-  var endepoch = new Date(date +' '+endtime).valueOf();
+  var startepoch = new Date(date +' '+ starttime).valueOf()/1000;
+  var endepoch = new Date(date +' '+endtime).valueOf()/1000;
 
 
 //Times readable
@@ -225,8 +225,8 @@ function updateshow_submit() {
     var date = '2020-4-24'
   }
 
-  var startepoch = new Date(date +' '+ starttime).valueOf();
-  var endepoch = new Date(date +' '+endtime).valueOf();
+  var startepoch = new Date(date +' '+ starttime).valueOf()/1000;
+  var endepoch = new Date(date +' '+endtime).valueOf()/1000;
 
 
 //Times readable
