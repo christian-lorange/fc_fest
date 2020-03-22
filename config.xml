@@ -98,7 +98,7 @@
 
 
     <!-- Push Notification -->
-    <gap:plugin name="onesignal-cordova-plugin" spec="^2.4.1" source="npm" />
+<gap:plugin name="onesignal-cordova-plugin" source="npm" />
 
 <platform name="ios">
 <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024"/>
